@@ -385,13 +385,13 @@ $0
 endsnippet
 
 snippet h2 "Heading 2"
-<h2 id="2">${1:Here is Heading 2}</h2>
+<h2 id="${1}">${2:Here is Heading 2}</h2>
 
 $0
 endsnippet
 
 snippet h3 "Heading 3"
-<h3 id="3">${1:Here is Heading 2}</h3>
+<h3 id="${1}">${2:Here is Heading 2}</h3>
 
 $0
 endsnippet
@@ -433,7 +433,7 @@ snippet deg "degree" w
 endsnippet
 
 snippet hlink  "hlink" w
-[$1]($2)$0 
+[$1](#$2)$0 
 endsnippet
 
 # table, e.g., 43tab<Tab>
