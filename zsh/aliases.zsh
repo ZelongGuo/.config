@@ -1,5 +1,5 @@
 alias vim='nvim'
 alias vi='nvim'
-alias ra='ranger'
-# shift + Q
-# alias QQ="exit" 
+# alias ra='ranger'
+alias ra='ranger --choosedir=$HOME/.rangerdir;LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias tt='tmux'
