@@ -35,3 +35,5 @@ This is ***my configuration files*** in my Mac, a little changes maybe needed if
 <h3 id="8">6. zsh</h3>
 
 - My **zsh**
+
+.shared file is used for getting access to remote server, like mefe9 of my GFZ computer.

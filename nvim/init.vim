@@ -64,7 +64,7 @@ inoremap jk <Esc>
 " inoremap <> <><++><Esc>4hi
 " inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 " Press space twice to jump to the next '<++>' and edit it, i.e., place holder
-map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+" map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 map s <nop>
 map S :w<CR>
@@ -206,31 +206,32 @@ Plug 'SirVer/ultisnips'
 call plug#end()
 
 
-"======
-" markdown noremap under insert mode
-"======
-autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
-" Bold text
-autocmd Filetype markdown inoremap <buffer> ,b ****<++><left><left><left><left><left><left>
-" Italic text
-autocmd Filetype markdown inoremap <buffer> ,i **<++><left><left><left><left><left>
-" deleted text
-autocmd Filetype markdown inoremap <buffer> ,d ~~~~<++><left><left><left><left><left><left>
-" link
-autocmd Filetype markdown inoremap <buffer> ,a [](<++>)<++><Esc>F[a
-" pictures
-"autocmd Filetype markdown inoremap <buffer> ,p ![](<++>)<++><Esc>F[a
-autocmd Filetype markdown inoremap <buffer> ,p <div align=center><img src="" width="<++>%" height="auto"></div><++><Esc>Fr3la
-" enter to next line
-"autocmd Filetype markdown inoremap ,p ![](<++>)<++><Esc>F[a
-" Color text
-autocmd Filetype markdown inoremap <buffer> ,c <font size="3"  color="red"></font><++><Esc>F>F>a
-" Background color
-autocmd Filetype markdown inoremap <buffer> ,bc <table><tr><td bgcolor=gray></td></tr></table><++><Esc>Fyla
-" Mathematical formula
-autocmd Filetype markdown inoremap <buffer> m<Tab>  $$<++><left><left><left><left><left>
-autocmd Filetype markdown inoremap <buffer> M<Tab>  $$$$<++><left><left><left><left><left><left>
-autocmd Filetype markdown inoremap <buffer> f<Tab>  \frac{}{<++>}<Esc>F{F{a
+" "======
+" " markdown noremap under insert mode
+" " Now the followings have been migrated to markdown.snippets
+" "======
+" autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
+" " Bold text
+" autocmd Filetype markdown inoremap <buffer> ,b ****<++><left><left><left><left><left><left>
+" " Italic text
+" autocmd Filetype markdown inoremap <buffer> ,i **<++><left><left><left><left><left>
+" " deleted text
+" autocmd Filetype markdown inoremap <buffer> ,d ~~~~<++><left><left><left><left><left><left>
+" " link
+" autocmd Filetype markdown inoremap <buffer> ,a [](<++>)<++><Esc>F[a
+" " pictures
+" "autocmd Filetype markdown inoremap <buffer> ,p ![](<++>)<++><Esc>F[a
+" autocmd Filetype markdown inoremap <buffer> ,p <div align=center><img src="" width="<++>%" height="auto"></div><++><Esc>Fr3la
+" " enter to next line
+" "autocmd Filetype markdown inoremap ,p ![](<++>)<++><Esc>F[a
+" " Color text
+" autocmd Filetype markdown inoremap <buffer> ,c <font size="3"  color="red"></font><++><Esc>F>F>a
+" " Background color
+" autocmd Filetype markdown inoremap <buffer> ,bc <table><tr><td bgcolor=gray></td></tr></table><++><Esc>Fyla
+" " " Mathematical formula
+" " autocmd Filetype markdown inoremap <buffer> m<Tab>  $$<++><left><left><left><left><left>
+" " autocmd Filetype markdown inoremap <buffer> M<Tab>  $$$$<++><left><left><left><left><left><left>
+" " autocmd Filetype markdown inoremap <buffer> f<Tab>  \frac{}{<++>}<Esc>F{F{a
 
 
 "++++++++++++++++++++++++++++++ Plugins Settings +++++++++++++++++++++++++++++++

@@ -17,7 +17,7 @@ inoremap jk <Esc>
 
 
 " =======================
-" the followings are removed to all.snippets, and we don't cancle the place holder
+" the followings are removed to all.snippets, and we also cancle the place holder
 " Auto-completion
 " Auto backspace when typing double parenthesis
 " inoremap "" ""<++><Esc>4hi
@@ -28,7 +28,7 @@ inoremap jk <Esc>
 " inoremap <> <><++><Esc>4hi
 " inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 " Press space twice to jump to the next '<++>' and edit it, i.e., place holder
-map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+" map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 ```
 
