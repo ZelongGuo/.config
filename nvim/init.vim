@@ -51,9 +51,9 @@ noremap H I
 noremap M L
 noremap <LEADER><CR> :nohlsearch<CR>
 
-" Insert mode return Esc
-" Visural mode need Esc or ctrl+c
+" Insert and Visual mode return Esc
 inoremap jk <Esc>
+vnoremap jk <Esc>
 " The following part of auto-completion about double parenthesis has moved to all.snippets
 " Auto backspace when typing double parenthesis
 " inoremap "" ""<++><Esc>4hi
@@ -184,7 +184,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'connorholyday/vim-snazzy'
 
 " Bookmarks
-"Plug 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 
 " A small plugin for standard output to quickfix window
 " it's good implemetation for GMT, for Python debugging you can install
