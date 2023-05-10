@@ -1,7 +1,20 @@
-<h1>Notes about mapping of vimrc and Ultisnips</h1>
-
+# Nvim
 > Zelong Guo, @ GFZ, Potsdam  
-2023-04-20 13:23  
+2024-04-20 13:23  
+
+> update: 2023-05-10 19:50  
+
+
+
+
+### Installation
+
+Open `init.vim` with `(neo)Vim`, then:  
+```vim
+:PlugInstall
+```
+
+### Notes about mapping of vimrc and Ultisnips
 
 Mapping in vimrc:
 We cancle the settings place holder and complete (), [] and {} etc in Ultisnips (all.snippets):
