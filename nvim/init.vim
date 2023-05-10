@@ -34,6 +34,8 @@ exec "nohlsearch"
 set incsearch
 "set ignorecase
 "set colorcolumn=100
+"Mouse is not allowed
+set mouse=
 
 noremap j h
 noremap i k
