@@ -19,6 +19,7 @@ if empty(glob($HOME.'/.config/nvim/autoload/plug.vim'))
 endif
 
 " ++++++++++++++++++++++++++++++ Some VIM Setting ++++++++++++++++++++++++++++++
+set hidden
 let mapleader = " "
 syntax enable
 syntax on
@@ -36,6 +37,7 @@ set incsearch
 "set colorcolumn=100
 "Mouse is not allowed
 set mouse=
+set updatetime=100
 
 noremap j h
 noremap i k
@@ -185,13 +187,16 @@ Plug 'ZelongGuo/eleline.vim'
 Plug 'tpope/vim-fugitive'
 "Plug 'connorholyday/vim-snazzy'
 
+" Auto Complete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Bookmarks
 Plug 'kshenoy/vim-signature'
 
 " A small plugin for standard output to quickfix window
 " it's good implemetation for GMT, for Python debugging you can install
 " vimspector plugin
-"Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim'
 
 " Git
 "Plug 'mhinz/vim-signify'
@@ -207,6 +212,45 @@ Plug 'SirVer/ultisnips'
 "Plug 'vimwiki/vimwiki'
 call plug#end()
 
+" ==================== coc.nvim ====================
+" If you come across errors with coc-explorer, see the providing error message
+let g:coc_global_extensions = [
+	\ 'coc-explorer']
+"
+" Use tab for trigger completion with characters ahead and navigate
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config
+" Here I use <C-i> and <C-k> to navigate
+inoremap <silent><expr> <C-k>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<C-k>" :
+      \ coc#refresh()
+inoremap <expr><C-i> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Use <C-t> to trigger completion
+inoremap <silent><expr> <C-t> coc#refresh() 
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> <LEADER>h :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap tt :CocCommand explorer<CR>
 
 " "======
 " " markdown noremap under insert mode
