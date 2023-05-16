@@ -50,9 +50,15 @@ noremap L 7l
 noremap <C-j> 0
 " go to end of the line
 noremap <C-l> $
+" go to the top of the screen
+noremap <C-i> H 
+" go to the bottom of the screen
+noremap <C-k> L 
+" go to the Middile of the screen
+noremap <C-m> M 
 noremap h i
 noremap H I
-noremap M L
+"noremap M L
 noremap <LEADER><CR> :nohlsearch<CR>
 
 " Insert and Visual mode return Esc
