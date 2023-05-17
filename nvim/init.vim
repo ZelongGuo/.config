@@ -26,6 +26,8 @@ syntax on
 set autochdir
 set number
 set relativenumber
+set ttimeoutlen=0
+set notimeout
 set cursorline
 set cursorcolumn
 set showcmd
@@ -58,12 +60,17 @@ noremap <C-k> L
 noremap <C-m> M 
 noremap h i
 noremap H I
+" Faster in-line navigation
+noremap W 5w
+noremap B 5b
 "noremap M L
 noremap <LEADER><CR> :nohlsearch<CR>
 
 " Insert and Visual mode return Esc
 inoremap jk <Esc>
 vnoremap jk <Esc>
+" Delte a character, same to 'backspace'
+inoremap <C-j> <C-h>
 " The following part of auto-completion about double parenthesis has moved to all.snippets
 " Auto backspace when typing double parenthesis
 " inoremap "" ""<++><Esc>4hi
@@ -226,12 +233,17 @@ let g:coc_global_extensions = [
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config
-" Here I use <C-i> and <C-k> to navigate
-inoremap <silent><expr> <C-k>
+" Here I use <Tab> and <S-Tab> to navigate
+inoremap <silent><expr> <Tab>
       \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<C-k>" :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><C-i> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <expr><S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 
 " Use <C-t> to trigger completion
 inoremap <silent><expr> <C-t> coc#refresh() 
@@ -325,9 +337,9 @@ let g:mkdp_markdown_css = ''
 let g:mkdp_highlight_css = ''
 
 " ==================== ultisnips ====================
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
+let g:UltiSnipsExpandTrigger = "<C-q>"
+let g:UltiSnipsJumpForwardTrigger = "<C-q>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-w>"
 
 " if &filetype ==# 'markdown'
 " The folder contains the markdown.snippets, configrations can be refered to: " https://github.com/cold-soda-jay/Markdown-vim
