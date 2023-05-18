@@ -45,6 +45,6 @@ _fix_cursor() {
 }
 precmd_functions+=(_fix_cursor)
 
-
+# NOTE: here is improtant, you should dpecify the KEYTIMEOUT >= 20 ms
 KEYTIMEOUT=20
 
