@@ -6,3 +6,5 @@ source ~/.config/zsh/plugins.zsh
 
 source ~/.config/zsh/vim.zsh
 
+source ~/.config/zsh/tmux.zsh
+
