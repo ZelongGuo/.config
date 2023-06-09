@@ -198,6 +198,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 Plug 'ZelongGuo/nvim-deus'
 Plug 'ZelongGuo/eleline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
 "Plug 'connorholyday/vim-snazzy'
 
 " Auto Complete
@@ -308,6 +309,16 @@ map <LEADER>tm :TableModeToggle<CR>
 " vim-snazzy
 "======
 "colorscheme snazzy
+
+" if you choose another colorscheme, you may need to cahnge the Background
+" color firstly:
+" set background=dark/light
+
+" ==================== indentLine ====================
+ let g:indentLine_char = '┆'
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:markdown_syntax_conceal=0
+
 
 " ==================== eleline.vim ====================
 let g:eleline_powerline_fonts = 0
