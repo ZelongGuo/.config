@@ -91,7 +91,7 @@ map R :call ResizeWindow4MP()<CR>
 map E :call RecoverWindows()<CR>
 "++++++++++++++++++++++++++++++ Self-defining Function ++++++++++++++++++++++++++++++
 func ResizeWindow4MP()
-	exec "silent ! osascript  ~/.config/AppleScript/resize_windows.scpt"
+	exec "silent ! osascript  ~/.config/AppleScript/resize_windows_V2.scpt"
 	exec ":MarkdownPreview"
 	" you can use command + tab to change the current focus to item
 	" exec "silent ! osascript  ~/.config/AppleScript/reactivate_iTerm.scpt"
