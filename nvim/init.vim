@@ -97,7 +97,7 @@ func ResizeWindow4MP()
 	" exec "silent ! osascript  ~/.config/AppleScript/reactivate_iTerm.scpt"
 endfunc
 func RecoverWindows()
-	exec "silent ! osascript  ~/.config/AppleScript/recover_window.scpt"
+	exec "silent ! osascript  ~/.config/AppleScript/recover_window_V2.scpt"
 endfunc
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
