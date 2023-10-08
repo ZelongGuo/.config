@@ -79,6 +79,8 @@ Follow below steps to solve this problem:
 # check the where the python3 and the pip3 are:
 which python3
 which pip3
+python3 --version
+pip3 --version
 # Note: it is easy to understand the locations of the Mac built-in Python is 
 # different with the Python conterpart in conda environment. Check Python Notes for more.
 # here Nvim is directly linked to the Mac built-in Python
