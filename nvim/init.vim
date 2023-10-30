@@ -190,7 +190,7 @@ endfunc
 " to install your plugin, just copy the plugin name from github to the below
 " section, and then type:
 " PlugInstall
-" to install your plug, just comment the below corresponding plug, and then
+" to uinstall your plug, just comment the below corresponding plug, and then
 " delete it under the .vim/plugged directory. 
 
 call plug#begin('$HOME/.config/nvim/plugged')
@@ -224,6 +224,11 @@ Plug 'SirVer/ultisnips'
 
 "Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
 "Plug 'vimwiki/vimwiki'
+
+" Editor enhancement
+Plug 'gcmt/wildfire.vim'
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 " ==================== coc.nvim ====================
@@ -358,4 +363,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-w>"
 " refer to: https://github.com/honza/vim-snippets/tree/master/UltiSnips
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/']
 let g:UltiSnipsEditSplit="vertical"
+
+
+
+
 
