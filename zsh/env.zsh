@@ -29,3 +29,5 @@ export EDITOR=nvim
 # --- CONDA ---
 export conda="/Users/zelong/opt/miniconda3/etc/profile.d/conda.sh"
 
+
+
