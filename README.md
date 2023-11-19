@@ -1,5 +1,8 @@
 <h1>My .config File</h1>
 
+![MyMBP](https://img.shields.io/badge/apple-mbp%20%202021-999999?logo=apple&logoColor=white)
+
+
 #### This is ***my configuration files*** in my Mac, a little changes maybe needed if you want to migrate it to your Linux.  
 For now, 3 key configurations for me are: **Neovim, ranger, tmux**.  
 **Iterm2** is an optional configuration for Mac.  
