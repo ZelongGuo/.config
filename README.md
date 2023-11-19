@@ -4,7 +4,7 @@
 For now, 3 key configurations for me are: **Neovim, ranger, tmux**.  
 **Iterm2** is an optional configuration for Mac.  
 
-:star: ***Recommandation:*** Swapping `CapsLock` and `Ctrl` to have a better coding experience for **vim** and prefix key of **tmux**. For some linux systems, see [this link.](https://www.emacswiki.org/emacs/MovingTheCtrlKey)  :)  
+:star: ***Recommandation:*** Swapping `CapsLock` and `Ctrl` to have a better coding experience for **vim** and prefix key of **tmux** (I'm eyeing HHKB...). For some linux systems, see [this link.](https://www.emacswiki.org/emacs/MovingTheCtrlKey)  :)  
 
 <h2 id="2">Content</h2>
 
