@@ -32,7 +32,8 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 
 <h3 id="5">3. iterm2</h3>
 
-- Same to **htop**
+- Same to **htop**.  
+- More information: https://zhuanlan.zhihu.com/p/550022490
 
 <h3 id="6">4. nvim</h3>
 
@@ -45,7 +46,10 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 
 <h3 id="8">6. zsh</h3>
 
-- My **zsh**
+- My **zsh**.  
+- Read the blog of following link, in case you need it:  
+  https://seismo-learn.org/seismology101/best-practices/zsh/
+
 
 <h3 id="9">7. .shared</h3>
 
