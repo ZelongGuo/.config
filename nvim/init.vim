@@ -35,6 +35,8 @@ set wildmenu
 set hlsearch
 exec "nohlsearch"
 set incsearch
+" Check English 
+set spell
 "set ignorecase
 "set colorcolumn=100
 "Mouse is not allowed
@@ -81,7 +83,7 @@ inoremap <C-j> <C-h>
 " inoremap <> <><++><Esc>4hi
 " inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 " Press space twice to jump to the next '<++>' and edit it, i.e., place holder
-" map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 map s <nop>
 map S :w<CR>
@@ -216,13 +218,14 @@ Plug 'skywind3000/asyncrun.vim'
 "Plug 'mhinz/vim-signify'
 
 " markdown
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 " then you should run :call mkdp#util#install() to activate the markdownpreview, in case more errors you can find in the github page of markdown-preview.nvim
 " Plug 'SirVer/ultisnips',{'for':'markdown'} " Important, in this case, snippets is only valid for markdown
 Plug 'SirVer/ultisnips'
-
-"Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
+Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
+Plug 'preservim/vim-markdown'
+Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
 "Plug 'vimwiki/vimwiki'
 
 " Editor enhancement
@@ -276,43 +279,40 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap tt :CocCommand explorer<CR>
 
-" "======
-" " markdown noremap under insert mode
-" " Now the followings have been migrated to markdown.snippets
-" "======
-" autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
-" " Bold text
-" autocmd Filetype markdown inoremap <buffer> ,b ****<++><left><left><left><left><left><left>
-" " Italic text
-" autocmd Filetype markdown inoremap <buffer> ,i **<++><left><left><left><left><left>
-" " deleted text
-" autocmd Filetype markdown inoremap <buffer> ,d ~~~~<++><left><left><left><left><left><left>
-" " link
-" autocmd Filetype markdown inoremap <buffer> ,a [](<++>)<++><Esc>F[a
-" " pictures
-" "autocmd Filetype markdown inoremap <buffer> ,p ![](<++>)<++><Esc>F[a
-" autocmd Filetype markdown inoremap <buffer> ,p <div align=center><img src="" width="<++>%" height="auto"></div><++><Esc>Fr3la
-" " enter to next line
-" "autocmd Filetype markdown inoremap ,p ![](<++>)<++><Esc>F[a
-" " Color text
-" autocmd Filetype markdown inoremap <buffer> ,c <font size="3"  color="red"></font><++><Esc>F>F>a
-" " Background color
-" autocmd Filetype markdown inoremap <buffer> ,bc <table><tr><td bgcolor=gray></td></tr></table><++><Esc>Fyla
-" " " Mathematical formula
-" " autocmd Filetype markdown inoremap <buffer> m<Tab>  $$<++><left><left><left><left><left>
-" " autocmd Filetype markdown inoremap <buffer> M<Tab>  $$$$<++><left><left><left><left><left><left>
-" " autocmd Filetype markdown inoremap <buffer> f<Tab>  \frac{}{<++>}<Esc>F{F{a
+"======
+" markdown noremap under insert mode
+" Now the followings have been migrated to markdown.snippets
+"======
+autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
+" Bold text
+autocmd Filetype markdown inoremap <buffer> ,b ****<++><left><left><left><left><left><left>
+" Italic text
+autocmd Filetype markdown inoremap <buffer> ,i **<++><left><left><left><left><left>
+" deleted text
+autocmd Filetype markdown inoremap <buffer> ,d ~~~~<++><left><left><left><left><left><left>
+" link
+autocmd Filetype markdown inoremap <buffer> ,a [](<++>)<++><Esc>F[a
+" pictures
+"autocmd Filetype markdown inoremap <buffer> ,p ![](<++>)<++><Esc>F[a
+autocmd Filetype markdown inoremap <buffer> ,p <div align=center><img src="" width="<++>%" height="auto"></div><++><Esc>Fr3la
+" enter to next line
+"autocmd Filetype markdown inoremap ,p ![](<++>)<++><Esc>F[a
+" Color text
+autocmd Filetype markdown inoremap <buffer> ,c <font size="3"  color="red"></font><++><Esc>F>F>a
+" Background color
+autocmd Filetype markdown inoremap <buffer> ,bc <table><tr><td bgcolor=gray></td></tr></table><++><Esc>Fyla
+" " Mathematical formula
+" autocmd Filetype markdown inoremap <buffer> m<Tab>  $$<++><left><left><left><left><left>
+" autocmd Filetype markdown inoremap <buffer> M<Tab>  $$$$<++><left><left><left><left><left><left>
+" autocmd Filetype markdown inoremap <buffer> f<Tab>  \frac{}{<++>}<Esc>F{F{a
 
 
 "++++++++++++++++++++++++++++++ Plugins Settings +++++++++++++++++++++++++++++++
-"======
-" vim-table-mode
-"======
+"
+" ==================== vim-table-mode  ====================" 
 map <LEADER>tm :TableModeToggle<CR>
 
-"======
-" vim-snazzy
-"======
+" ====================  vim-snazzy  ==================== 
 "colorscheme snazzy
 
 " if you choose another colorscheme, you may need to cahnge the Background
@@ -351,6 +351,25 @@ let g:mkdp_markdown_css = ''
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
 let g:mkdp_highlight_css = ''
+
+
+" ==================== Vim-Markdown  ====================
+let g:vim_markdown_conceal = 0
+" code block
+let g:vim_markdown_conceal_code_block = 0
+" latex formula
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+" disable folding
+let g:vim_markdown_folding_disabled = 1
+" apply above to other files
+let g:vim_markdown_auto_extension_ext = 'txt'
+
+" ==================== vim-markdown-toc " ====================
+let g:vmt_fence_text = 'TOC'
+let g:vmt_fence_closing_text = '/TOC'
+let g:vmt_cycle_list_item_markers = 1
+
 
 " ==================== ultisnips ====================
 let g:UltiSnipsExpandTrigger = "<C-q>"
