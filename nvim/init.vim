@@ -42,6 +42,20 @@ set spell
 "Mouse is not allowed
 set mouse=
 set updatetime=100
+" set folding
+set foldmethod=marker
+set foldmarker=<center>,</center>
+
+" set foldmethod=expr
+" set foldexpr=MarkdownFold()
+" function! MarkdownFold()
+"   " 定义折叠的规则
+"   if getline(v:lnum) =~ '^ *<.*>.*<.*>$'
+"     return '>'
+"   else
+"     return '='
+"   endif
+" endfunction
 
 noremap j h
 noremap i k
@@ -81,7 +95,7 @@ inoremap <C-j> <C-h>
 " inoremap {} {}<++><Esc>4hi
 " inoremap [] []<++><Esc>4hi
 " inoremap <> <><++><Esc>4hi
-" inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
+inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 " Press space twice to jump to the next '<++>' and edit it, i.e., place holder
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
@@ -224,7 +238,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " Plug 'SirVer/ultisnips',{'for':'markdown'} " Important, in this case, snippets is only valid for markdown
 Plug 'SirVer/ultisnips'
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
-Plug 'preservim/vim-markdown'
+" Plug 'preservim/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
 "Plug 'vimwiki/vimwiki'
 
@@ -279,32 +293,32 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap tt :CocCommand explorer<CR>
 
-"======
-" markdown noremap under insert mode
-" Now the followings have been migrated to markdown.snippets
-"======
-autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
-" Bold text
-autocmd Filetype markdown inoremap <buffer> ,b ****<++><left><left><left><left><left><left>
-" Italic text
-autocmd Filetype markdown inoremap <buffer> ,i **<++><left><left><left><left><left>
-" deleted text
-autocmd Filetype markdown inoremap <buffer> ,d ~~~~<++><left><left><left><left><left><left>
-" link
-autocmd Filetype markdown inoremap <buffer> ,a [](<++>)<++><Esc>F[a
-" pictures
-"autocmd Filetype markdown inoremap <buffer> ,p ![](<++>)<++><Esc>F[a
-autocmd Filetype markdown inoremap <buffer> ,p <div align=center><img src="" width="<++>%" height="auto"></div><++><Esc>Fr3la
-" enter to next line
-"autocmd Filetype markdown inoremap ,p ![](<++>)<++><Esc>F[a
-" Color text
-autocmd Filetype markdown inoremap <buffer> ,c <font size="3"  color="red"></font><++><Esc>F>F>a
-" Background color
-autocmd Filetype markdown inoremap <buffer> ,bc <table><tr><td bgcolor=gray></td></tr></table><++><Esc>Fyla
-" " Mathematical formula
-" autocmd Filetype markdown inoremap <buffer> m<Tab>  $$<++><left><left><left><left><left>
-" autocmd Filetype markdown inoremap <buffer> M<Tab>  $$$$<++><left><left><left><left><left><left>
-" autocmd Filetype markdown inoremap <buffer> f<Tab>  \frac{}{<++>}<Esc>F{F{a
+" "======
+" " markdown noremap under insert mode
+" " Now the followings have been migrated to markdown.snippets
+" "======
+" autocmd Filetype markdown inoremap <buffer> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
+" " Bold text
+" autocmd Filetype markdown inoremap <buffer> ,b ****<++><left><left><left><left><left><left>
+" " Italic text
+" autocmd Filetype markdown inoremap <buffer> ,i **<++><left><left><left><left><left>
+" " deleted text
+" autocmd Filetype markdown inoremap <buffer> ,d ~~~~<++><left><left><left><left><left><left>
+" " link
+" autocmd Filetype markdown inoremap <buffer> ,a [](<++>)<++><Esc>F[a
+" " pictures
+" "autocmd Filetype markdown inoremap <buffer> ,p ![](<++>)<++><Esc>F[a
+" autocmd Filetype markdown inoremap <buffer> ,p <div align=center><img src="" width="<++>%" height="auto"></div><++><Esc>Fr3la
+" " enter to next line
+" "autocmd Filetype markdown inoremap ,p ![](<++>)<++><Esc>F[a
+" " Color text
+" autocmd Filetype markdown inoremap <buffer> ,c <font size="3"  color="red"></font><++><Esc>F>F>a
+" " Background color
+" autocmd Filetype markdown inoremap <buffer> ,bc <table><tr><td bgcolor=gray></td></tr></table><++><Esc>Fyla
+" " " Mathematical formula
+" " autocmd Filetype markdown inoremap <buffer> m<Tab>  $$<++><left><left><left><left><left>
+" " autocmd Filetype markdown inoremap <buffer> M<Tab>  $$$$<++><left><left><left><left><left><left>
+" " autocmd Filetype markdown inoremap <buffer> f<Tab>  \frac{}{<++>}<Esc>F{F{a
 
 
 "++++++++++++++++++++++++++++++ Plugins Settings +++++++++++++++++++++++++++++++
@@ -353,17 +367,17 @@ let g:mkdp_markdown_css = ''
 let g:mkdp_highlight_css = ''
 
 
-" ==================== Vim-Markdown  ====================
-let g:vim_markdown_conceal = 0
-" code block
-let g:vim_markdown_conceal_code_block = 0
-" latex formula
-let g:tex_conceal = ""
-let g:vim_markdown_math = 1
-" disable folding
-let g:vim_markdown_folding_disabled = 1
-" apply above to other files
-let g:vim_markdown_auto_extension_ext = 'txt'
+" " ==================== Vim-Markdown  ====================
+" let g:vim_markdown_conceal = 0
+" " code block
+" let g:vim_markdown_conceal_code_block = 0
+" " latex formula
+" let g:tex_conceal = ""
+" let g:vim_markdown_math = 1
+" " disable folding
+" let g:vim_markdown_folding_disabled = 1
+" " apply above to other files
+" let g:vim_markdown_auto_extension_ext = 'txt'
 
 " ==================== vim-markdown-toc " ====================
 let g:vmt_fence_text = 'TOC'

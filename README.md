@@ -1,4 +1,4 @@
-<h1>My .config File</h1>
+# My .config File
 
 ![MyMBP](https://img.shields.io/badge/apple-mbp%20%202021-999999?logo=apple&logoColor=white)
 
@@ -9,58 +9,61 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 
 :star: ***Recommandation:*** Swapping `CapsLock` and `Ctrl` to have a better coding experience for **vim** and prefix key of **tmux** (I'm eyeing HHKB...). For some linux systems, see [this link.](https://www.emacswiki.org/emacs/MovingTheCtrlKey)  :)  
 
-<h2 id="2">Content</h2>
 
-- [1. Applescript](#3) 
-- [2. htop](#4) 
-- [3. iterm2](#5) 
-- [4. nvim](#6) 
-- [5. ranger](#7) 
-- [6. zsh](#8) 
-- [7. .shared](#9) 
-- [8. .tmux.conf](#10) 
-- [9. Troubleshooting](#11) 
+<!-- TOC GFM -->
 
-<h3 id="3">1. Applescript</h3>
+- [1. Applescript](#1-applescript)
+- [2. htop](#2-htop)
+- [3. iterm2](#3-iterm2)
+- [4. nvim](#4-nvim)
+- [5. ranger](#5-ranger)
+- [6. zsh](#6-zsh)
+- [7. .shared](#7-shared)
+- [8. .tmux.conf](#8-tmuxconf)
+- [9. Troubleshooting](#9-troubleshooting)
+
+<!-- /TOC -->
+
+
+### 1. Applescript
 
 - Some apple scripts I wrote for rezise windowns and some stuff...
 
-
-<h3 id="4">2. htop</h3>
+### 2. htop
 
 - Automatically saved here when installed it.
 
-<h3 id="5">3. iterm2</h3>
+### 3. iterm2
 
 - Same to **htop**.  
 - More information: https://zhuanlan.zhihu.com/p/550022490
 
-<h3 id="6">4. nvim</h3>
+### 4. nvim
 
 - **Neovim** and its **configurations.** 
 
 
-<h3 id="7">5. ranger</h3>
+### 5. ranger
 
 - **ranger** and its **configurations.** 
 
-<h3 id="8">6. zsh</h3>
+### 6. zsh
 
 - My **zsh**.  
 - Read the blog of following link, in case you need it:  
   https://seismo-learn.org/seismology101/best-practices/zsh/
 
 
-<h3 id="9">7. .shared</h3>
+### 7. .shared
 
 - **.shared** file is used for getting access to remote server, like mefe9 of my GFZ computer.  
 
-<h3 id="10">8. .tmux.conf</h3>
+### 8. .tmux.conf
 
 - **.tmux.conf** is my **tmux settings**.  
 
 ---
-<h3 id="11">9. Troubleshooting</h3>
+### 9. Troubleshooting
 
 - Some plugins have dependencies on **Python**, for example, ranger, coc and nvim. Here I want to document how to address **Python** dependencies in **Neovim**.  
 

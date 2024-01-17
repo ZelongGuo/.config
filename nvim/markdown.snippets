@@ -66,7 +66,7 @@ endsnippet
 
 # ----------------------------
 snippet / "Fraction" i
-\\frac{$1}{$2} ${0}
+\\frac{$1}{$2} $0
 endsnippet
 
 snippet == "& =" i
@@ -250,6 +250,18 @@ snippet int "intergration" i
 \int_{$1}^{$2} ${0}
 endsnippet
 
+snippet ~ "sim" i
+\sim ${0}
+endsnippet
+
+snippet per "perpendicular" i
+\perp ${0}
+endsnippet
+
+snippet par "parallel" i
+\parallel ${0}
+endsnippet
+
 
 # ----------------------------
 # others
@@ -281,94 +293,99 @@ snippet lra "left right arrow" i
 \Leftrightarrow ${0}
 endsnippet
 
+snippet deg "degree" i
+^\circ ${0}
+endsnippet
+
+
 # ----------------------------
 # Greek leters
-snippet alpha "alpha" i
-\alpha ${0}
+snippet alp "alpha" i
+\alpha${0}
 endsnippet
 
-snippet Alpha "Alpha" i
-\Alpha ${0}
+snippet Alp "Alpha" i
+\Alpha${0}
 endsnippet
 
-snippet beta "beta" i
-\beta ${0}
+snippet bet "beta" i
+\beta${0}
 endsnippet
 
-snippet Beta "Beta" i
-\Beta ${0}
+snippet Bet "Beta" i
+\Beta${0}
 endsnippet
 
-snippet gamma "gamma" i
-\gamma ${0}
+snippet gam "gamma" i
+\gamma${0}
 endsnippet
 
-snippet Gamma "Gamma" i
-\Gamma ${0}
+snippet Gam "Gamma" i
+\Gamma${0}
 endsnippet
 
-snippet delta "delta" i
-\delta ${0}
+snippet del "delta" i
+\delta${0}
 endsnippet
 
-snippet Delta "Delta" i
-\Delta ${0}
+snippet Del "Delta" i
+\Delta${0}
 endsnippet
 
-snippet epsilon "epsilon" i
+snippet eps "epsilon" i
 \varepsilon ${0}
 endsnippet
 
-snippet theta "theta" i
-\theta ${0}
+snippet the "theta" i
+\theta${0}
 endsnippet
 
-snippet kappa "kappa" i
-\kappa ${0}
+snippet kap "kappa" i
+\kappa${0}
 endsnippet
 
-snippet lambda "lambda" i
-\lambda ${0}
+snippet lam "lambda" i
+\lambda${0}
 endsnippet
 
-snippet lambda "eta" i
-\eta ${0}
+snippet ita "eta" i
+\eta${0}
 endsnippet
 
 snippet mu "mu" i
-\mu ${0}
+\mu${0}
 endsnippet
 
 snippet nu "nu" i
-\nu ${0}
+\nu${0}
 endsnippet
 
 snippet pi "pi" i
-\pi ${0}
+\pi${0}
 endsnippet
 
 snippet rho "rho" i
-\rho ${0}
+\rho${0}
 endsnippet
 
-snippet sigma "sigma" i
-\sigma ${0}
+snippet sig "sigma" i
+\sigma${0}
 endsnippet
 
 snippet tau "tau" i
-\tau ${0}
+\tau${0}
 endsnippet
 
 snippet Phi "Phi" i
-\phi ${0}
+\phi${0}
 endsnippet
 
 snippet phi "phi" i
-\varphi ${0}
+\varphi${0}
 endsnippet
 
-snippet omega "omega" i
-\omega ${0}
+snippet ome "omega" i
+\omega${0}
 endsnippet
 
 
@@ -439,9 +456,9 @@ endsnippet
 # |$3|$0|
 # endsnippet
 
-snippet deg "degree" w
-&deg;
-endsnippet
+# snippet deg "degree" w
+# &deg;
+# endsnippet
 
 # # Better to use plugin vim-table-mode
 # # table, e.g., 43tab<Tab>

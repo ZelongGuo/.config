@@ -4,9 +4,6 @@
 
 > update: 2023-05-10 19:50  
 
-
-
-
 ### Installation
 
 Open `init.vim` with `(neo)Vim`, then:  
