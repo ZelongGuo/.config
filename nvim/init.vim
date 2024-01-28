@@ -193,10 +193,10 @@ func CompileRunGcc()
 		exec "AsyncRun! time python %"
 		exec "copen"
 	elseif &filetype == 'c'
-		exec "AsyncRun! g++ % -o %<"
+		exec "AsyncRun! gcc % -o %<"
 		exec "copen"
 	elseif &filetype == 'cpp'
-		exec "AsyncRUn! g++ % -o %<"
+		exec "AsyncRun! g++ % -o %<"
 		exec "copen"
 	endif
 endfunc
