@@ -8,7 +8,7 @@
 "         |___/                                  
 "
 " Author: Zelong Guo @ GFZ, Potsdam
-" Email: zelong.guo@outlook.com 
+" Email: zelong.guo@outlook.com
 "
 
 " ==================== Auto load for first time uses ====================
@@ -18,7 +18,7 @@ if empty(glob($HOME.'/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYNVIMRC
 endif
 
-" ++++++++++++++++++++++++++++++ Some VIM Setting ++++++++++++++++++++++++++++++
+" +++++++++++++++++++++++++++++e Some VIM Setting ++++++++++++++++++++++++++++++
 set hidden
 let mapleader = " "
 syntax enable
@@ -259,13 +259,18 @@ let g:coc_global_extensions = [
 " Here I use <Tab> and <S-Tab> to navigate
 inoremap <silent><expr> <Tab>
       \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
+      \ <SID>CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! s:CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 
 " Use <C-t> to trigger completion
