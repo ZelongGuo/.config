@@ -8,7 +8,7 @@
 "         |___/                                  
 "
 " Author: Zelong Guo @ GFZ, Potsdam
-" Email: zelong.guo@outlook.com
+" Email: zelong.guo@outlook.com 
 "
 
 " ==================== Auto load for first time uses ====================
@@ -26,8 +26,11 @@ syntax on
 set autochdir
 set number
 set relativenumber
-set ttimeoutlen=0
 set notimeout
+" normal mode timeout
+set timeoutlen=0
+" insert and visual modes timeout
+set ttimeoutlen=0
 set cursorline
 set cursorcolumn
 set showcmd
@@ -57,13 +60,13 @@ set foldmarker=<center>,</center>
 "   endif
 " endfunction
 
-noremap j h
-noremap i k
-noremap k j
-noremap J 7h
-noremap I 5k
-noremap K 5j
-noremap L 7l
+noremap <silent> j h
+noremap <silent> i k
+noremap <silent> k j
+noremap <silent> J 7h
+noremap <silent> I 5k
+noremap <silent> K 5j
+noremap <silent> L 7l
 " go to start of the line
 noremap <C-j> 0
 " go to end of the line
@@ -82,7 +85,7 @@ noremap B 5b
 "noremap M L
 noremap <LEADER><CR> :nohlsearch<CR>
 
-" Insert and Visual mode return Esc
+" Insert and Visual mode return Esc 
 inoremap jk <Esc>
 vnoremap jk <Esc>
 " Delte a character, same to 'backspace'
