@@ -24,38 +24,46 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 | .shared     | Script for getting access to remote server of the institution.                                             |
 | .tmux.conf  | My tmux settings.                                                                                          |
 ---
+### Iterm2 Operations
+| keys          | operations         |
+|---------------|--------------------|
+| `cmd +`       | increase font size |
+| `cmd -`       | decrease font zise |
+| `cmd 0`       | recover font size  |
+| `cmd shift 0` | zoom window        |
+---
 
 ### Tmux Operations
-| keys                  | operations                      |
-|-----------------------|---------------------------------|
-| C-a + w               | check current windows and panes |
-| **Pane Operations**   |
-| C-a + -               | split pane horizontally         |
-| C-a + \|              | split pane vertically           |
-| C-a + i               | move cursor up                  |
-| C-a + j               | move cursor left                |
-| C-a + k               | move cursor down                |
-| C-a + l               | move cursor right               |
-| C-a + f               | full pane                       |
-| C-a + >               | swap with previous pane         |
-| C-a + <               | swap with next pane             |
-| C-a + UP              | resize upward                   |
-| C-a + DOWN            | resize downward                 |
-| C-a + LEFT            | resize to the left              |
-| C-a + right           | resize to the right             |
-| C-a + q               | kill pane                       |
-| C-a + space           | change pane view                |
-| C-a + h               | display panes                   |
-| **Window Operations** |
-| C-a + c               | create a new window             |
-| C-a + number          | select NO. window               |
-| C-a + C-j             | select previous window          |
-| C-a + C-l             | select next window              |
-| C-a + C-q             | kill window                     |
-| **vim-copy mode**     |
-| C-a + [               | enter vim-copy mode             |
-| C-a + p               | paste buffer                    |
-| C-a +b                | list buffers                    |
+| keys                   | operations                      |
+|------------------------|---------------------------------|
+| `C-a w`                | check current windows and panes |
+| **Pane Operations**    |
+| `C-a -`                | split pane horizontally         |
+| `C-a \|`               | split pane vertically           |
+| `C-a i`                | move cursor up                  |
+| `C-a j`                | move cursor left                |
+| `C-a k`                | move cursor down                |
+| `C-a l`                | move cursor right               |
+| `C-a f`                | full pane                       |
+| `C-a >`                | swap with previous pane         |
+| `C-a <`                | swap with next pane             |
+| `C-a UP`               | resize upward                   |
+| `C-a DOWN`             | resize downward                 |
+| `C-a LEFT`             | resize to the left              |
+| `C-a right`            | resize to the right             |
+| `C-a q`                | kill pane                       |
+| `C-a space`            | change pane view                |
+| `C-a h`                | display panes                   |
+| `**Window Operations** |
+| `C-a c`                | create a new window             |
+| `C-a number`           | select NO. window               |
+| `C-a C-j`              | select previous window          |
+| `C-a C-l`              | select next window              |
+| `C-a C-q`              | kill window                     |
+| `**vim-copy mode**     |
+| `C-a [`              | enter vim-copy mode             |
+| `C-a p`              | paste buffer                    |
+| `C-a b`               | list buffers                    |
 
 
 
