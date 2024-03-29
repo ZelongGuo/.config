@@ -39,7 +39,7 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 | `C-a w`                | check current windows and panes |
 | **Pane Operations**    |
 | `C-a -`                | split pane horizontally         |
-| `C-a \|`               | split pane vertically           |
+| `C-a \`               | split pane vertically           |
 | `C-a i`                | move cursor up                  |
 | `C-a j`                | move cursor left                |
 | `C-a k`                | move cursor down                |
