@@ -66,6 +66,21 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 | `C-a b`               | list buffers                    |
 
 
+### Ranger Operations (partially)
+| keys       | operations                              |
+|------------|-----------------------------------------|
+| `i`        | upward                                  |
+| `k`        | downward                                |
+| `j`        | left                                    |
+| `l`        | right                                   |
+| `gh`       | go home                                 |
+| `r+number` | open file/folder with different options |
+| `r+0`      | open file with default editor/program   |
+| `space`    | select                                  |
+| `yy`       | copy file                               |
+| `dd`       | cut file                                |
+| `pp`       | paste file                              |
+| `zh`       | hidden files                            |
 
 ### Troubleshooting Notes
 
