@@ -48,6 +48,10 @@ set updatetime=100
 " set folding
 set foldmethod=marker
 set foldmarker=<center>,</center>
+" set indent
+"set smartindent
+set cindent
+set shiftwidth=4
 
 " set foldmethod=expr
 " set foldexpr=MarkdownFold()
