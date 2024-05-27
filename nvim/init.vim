@@ -53,10 +53,20 @@ set foldmarker=<center>,</center>
 set cindent
 set shiftwidth=4
 
+" Don't save the marks for next-time opening files
+set viminfo='100,\"0
+" Automatically located the cursor to the place of last exiting file
+if has("autocmd")
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal! g'\"" |
+        \ endif
+endif
+
 " set foldmethod=expr
 " set foldexpr=MarkdownFold()
 " function! MarkdownFold()
-"   " 定义折叠的规则
+"   " define the rules for folding
 "   if getline(v:lnum) =~ '^ *<.*>.*<.*>$'
 "     return '>'
 "   else
