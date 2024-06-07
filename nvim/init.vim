@@ -174,7 +174,6 @@ func SetTitle4py()
 endf
 
 " Shortcut key for GMT to add some pre-settings: Press F4
-" map <F4> ms:call SetSettings4gmt()<CR>'s
 map <F4> :call SetSettings4gmt()<CR>
 func SetSettings4gmt()
 	call append(4, "gmt set MAP_FRAME_PEN 1p")
@@ -210,10 +209,12 @@ func CompileRunGcc()
 		exec "AsyncRun! time python %"
 		exec "copen"
 	elseif &filetype == 'c'
-		exec "AsyncRun! gcc % -o %<"
+		" -g create debugging information for gdb or lldb
+		exec "AsyncRun! gcc -g % -o %<"
 		exec "copen"
 	elseif &filetype == 'cpp'
-		exec "AsyncRun! g++ % -o %<"
+		" -g create debugging information for gdb or lldb
+		exec "AsyncRun! g++ -g % -o %<"
 		exec "copen"
 	endif
 endfunc
@@ -262,6 +263,9 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] 
 " Editor enhancement
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
+
+" Debugging, but now turn to lldb ...
+"Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --verbose'}
 
 call plug#end()
 
@@ -419,7 +423,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-w>"
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/']
 let g:UltiSnipsEditSplit="vertical"
 
-
+" ==================== vimspector ====================
+" see theCW for more vimspector settings
+"let g:vimspector_enable_mappings = 'HUMAN'
 
 
 
