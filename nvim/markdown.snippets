@@ -460,23 +460,25 @@ endsnippet
 # &deg;
 # endsnippet
 
-# # Better to use plugin vim-table-mode
-# # table, e.g., 43tab<Tab>
-# snippet '(?<!\\)([0-9])([0-9])tab' "definele" r
-# $1`!p 
-# x=match.group(1)
-# y=match.group(2)
-# row1=""
-# row2="" 
-# for i in range(int(x)):
-# 	row1+="| "
-# 	row2+="|:-:"
-# row1+="|\n"
-# row2+="|\n"
-# out=row1+row2+int(y)*row1
-# snip.rv=out
-# `$0
-# endsnippet
+# Better to use plugin vim-table-mode and the following snippet
+# table, e.g., 43tab<Tab>
+snippet '(?<!\\)([0-9])([0-9])tab' "definele" r
+$1`!p 
+x=match.group(1)
+y=match.group(2)
+row1=""
+row2="" 
+for i in range(int(x)):
+	# row1+="| "
+	# row2+="|:-:"
+	row1+="|<++> "
+	row2+="|-"
+row1+="|\n"
+row2+="|\n"
+out=row1+row2+int(y)*row1
+snip.rv=out
+`$0
+endsnippet
 
 # snippet box "box" w
 # <div class="solid">
