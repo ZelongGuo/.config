@@ -39,6 +39,7 @@ inoremap jk <Esc>
 " inoremap ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
 " Press space twice to jump to the next '<++>' and edit it, i.e., place holder
 " map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
-
 ```
+
+**Todo**: Color settings with Latex formula ...
 
