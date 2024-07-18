@@ -74,4 +74,8 @@ zmodule Aloxaf/fzf-tab
 
 # scheme
 #zmodule magicmace
-zmodule gitster
+#zmodule gitster
+#zmodule eriner
+#zmodule bira
+#zmodule sorin
+zmodule steeef
