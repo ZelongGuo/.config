@@ -234,6 +234,7 @@ Plug 'ZelongGuo/eleline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 "Plug 'connorholyday/vim-snazzy'
+Plug 'xiyaowong/nvim-cursorword' 
 
 " Auto Complete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -352,15 +353,19 @@ nmap tt :CocCommand explorer<CR>
 " ==================== vim-table-mode  ====================" 
 map <LEADER>tm :TableModeToggle<CR>
 
-" ====================  vim-snazzy  ==================== 
-"colorscheme snazzy
+" ==================== nvim-cursorword ====================" 
+" Only highlight the word under the cursor
+hi default CursorWord cterm=underline gui=underline
 
-" if you choose another colorscheme, you may need to cahnge the Background
+" ====================  vim-snazzy  ==================== 
+"color scheme snazzy
+
+" if you choose another color scheme, you may need to change the Background
 " color firstly:
 " set background=dark/light
 
 " ==================== indentLine ====================
- let g:indentLine_char = '┆'
+let g:indentLine_char = '┆'
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:markdown_syntax_conceal=0
 
