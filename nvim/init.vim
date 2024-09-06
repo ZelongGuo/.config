@@ -376,14 +376,16 @@ let g:markdown_syntax_conceal=0
 
 
 " ==================== airline themes ====================
-let g:airline_theme='papercolor'
+"let g:airline_theme='papercolor'
+"let g:airline_theme='google_light'
+let g:airline_theme='sol'
 
 " ====================  vim-colorschemes / awesome-vim-colorschemes ====================
 set background=light
 "colorscheme solarized8_light_high
 "colorscheme Atelier_DuneLight
 "colorscheme Atelier_EstuaryLight
-" colorscheme Atelier_ForestLight
+colorscheme Atelier_ForestLight
 "colorscheme Atelier_PlateauLight
 "colorscheme Atelier_SavannaLight
 "colorscheme Atelier_SeasideLight
@@ -396,7 +398,7 @@ set background=light
 "colorscheme macvim-light
 "colorscheme lightning
 "colorscheme lightcolors
-colorscheme rakr-light
+" colorscheme rakr-light
 "colorscheme seoul256-light
 "colorscheme tigrana-256-light
 
