@@ -52,6 +52,13 @@ set foldmarker=<center>,</center>
 "set smartindent
 set cindent
 set shiftwidth=4
+" Enable true color support, important for colorschemes
+if has("termguicolors")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+    set termguicolors
+endif
 
 " Don't save the marks for next-time opening files
 set viminfo='100,\"0
@@ -229,8 +236,13 @@ endfunc
 
 call plug#begin('$HOME/.config/nvim/plugged')
 " Color Scheme
-Plug 'ZelongGuo/nvim-deus'
-Plug 'ZelongGuo/eleline.vim'
+"Plug 'ZelongGuo/nvim-deus'
+"Plug 'ZelongGuo/eleline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
+"Plug 'rafi/awesome-vim-colorschemes'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 "Plug 'connorholyday/vim-snazzy'
@@ -357,32 +369,51 @@ map <LEADER>tm :TableModeToggle<CR>
 " Only highlight the word under the cursor
 hi default CursorWord cterm=underline gui=underline
 
-" ====================  vim-snazzy  ==================== 
-"color scheme snazzy
-
-" if you choose another color scheme, you may need to change the Background
-" color firstly:
-" set background=dark/light
-
 " ==================== indentLine ====================
 let g:indentLine_char = '┆'
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:markdown_syntax_conceal=0
 
 
-" ==================== eleline.vim ====================
-let g:eleline_powerline_fonts = 0
+" ==================== airline themes ====================
+let g:airline_theme='papercolor'
 
-" ==================== Dress up my vim ====================
-"set termguicolors 
-" enable true colors support
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" nvim-deus settings
-silent! color deus
+" ====================  vim-colorschemes / awesome-vim-colorschemes ====================
+set background=light
+"colorscheme solarized8_light_high
+"colorscheme Atelier_DuneLight
+"colorscheme Atelier_EstuaryLight
+" colorscheme Atelier_ForestLight
+"colorscheme Atelier_PlateauLight
+"colorscheme Atelier_SavannaLight
+"colorscheme Atelier_SeasideLight
+"colorscheme Atelier_SulphurpoolLight
+"colorscheme LightTan
+"colorscheme LightYellow
+"colorscheme OceanicNextLight
+"colorscheme flattened_light
+"colorscheme habiLight
+"colorscheme macvim-light
+"colorscheme lightning
+"colorscheme lightcolors
+colorscheme rakr-light
+"colorscheme seoul256-light
+"colorscheme tigrana-256-light
+
+
+"" ==================== eleline.vim ====================
+"let g:eleline_powerline_fonts = 0
+"
+"" ==================== Dress up my vim ====================
+"silent! color deus
 
 "hi NonText ctermfg=gray guifg=gray10
 "hi SpecialKey ctermfg=blue guifg=grey70
 "hi CursorLine guibg=gray20 ctermbg=black
+
+" ====================  vim-snazzy  ==================== 
+"color scheme snazzy
+
 
 " ==================== Markdown Preview ====================
 " More info refer to the webpage of markdown-previer.nvim
