@@ -84,8 +84,8 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 
 ### Troubleshooting Notes
 
-- Some plugins have dependencies on **Python**, for example, ranger, coc and nvim. Here I want to document how to address **Python** dependencies in **Neovim**.  
-
+**1. Python dependencies in Neovim**
+  Some plugins have dependencies on **Python**, for example, ranger, coc and nvim. Here I want to document how to address **Python** dependencies in **Neovim**.  
   **Check Python Dependencies:**  
   ```zsh
   # errors are threw when typing in Neovim:
@@ -117,6 +117,34 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
   pip3 install --user --upgrade neovim
   ```
   *Note: more info about the python environment, PYTHONPATH setting as well as python environment in Conda, see the Python Notes...*
-  
+
+**2. True color compatibility between Item2, tmux and nvim**  
+
+Indicate the folowing content into env.sh to make iterm2 enabling true color.
+```zsh
+# --- True Color ---
+# set the terminal (iterm) to 256 xterm, only some of modern terminal emulators support true color
+export TERM=xterm-256color  
+# tell current applications like vim and tmux that the current terminal support true color
+export COLORTERM=truecolor  
+```
+Then add the followings to tmux configure file. If you don't do or you did it wrongly, you will come across some wired thing with the comments in Nvim. See Troubleshooting part of [this link.](https://github.com/lifepillar/vim-solarized8?tab=readme-ov-file) 
+```zsh
+# Important! Set colorscheme to be compatible with VIM, enable true colors
+set -g default-terminal "tmux-256color"  # not screen-256color
+set-option -ga terminal-overrides ",*256col*:Tc"
+```
+You should explicitly indicate "termguicolors" with vim to enable the vim true color, otherwise some vim color schemes like solarized8 can't work well.
+```zsh
+" Enable true color support, important for colorschemes
+if has("termguicolors")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+    set termguicolors
+endif
+```
+
+
 
 
