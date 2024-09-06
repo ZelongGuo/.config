@@ -1,4 +1,11 @@
 # -------------------------------------------------------------------
+# --- True Color ---
+# set the terminal (iterm) to 256 xterm, only some of modern terminal emulators support true color
+export TERM=xterm-256color  
+# tell current applications like vim and tmux that the current terminal support true color
+export COLORTERM=truecolor  
+
+# -------------------------------------------------------------------
 # --- GMT ---
 # NOTE: once you change the gmt version using gmtswitch, you should refresh the terminal or source ~/.zshrc to reset the GS_LIB
 # for more information, see

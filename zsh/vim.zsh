@@ -24,7 +24,7 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 function zle-keymap-select {
 	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-		echo -ne '\e[1 q'
+		echo -ne '\e[1 q' 	    # cursor with block shape
 	elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
 		echo -ne '\e[5 q'
   fi
