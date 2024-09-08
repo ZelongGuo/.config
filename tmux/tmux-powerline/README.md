@@ -1,4 +1,10 @@
 # DEPRECATION WARNING
+> update: 2024-09-08 22:14  
+ 
+- update the codes to suit light mode
+
+Zelong Guo
+
 
 This project is in a maintenance mode and no future functionality is likely to be added. tmux-powerline, with all other powerline projects, is replaced by the new unifying [powerline](https://github.com/Lokaltog/powerline). However this project is still functional and can serve as a lightweight alternative for non-python users.
 
