@@ -61,9 +61,9 @@ For now, 3 key configurations for me are: **Neovim, ranger, tmux**.
 | `C-a C-l`              | select next window              |
 | `C-a C-q`              | kill window                     |
 | `**vim-copy mode**     |
-| `C-a [`              | enter vim-copy mode             |
-| `C-a p`              | paste buffer                    |
-| `C-a b`               | list buffers                    |
+| `C-a [`                | enter vim-copy mode             |
+| `C-a p`                | paste buffer                    |
+| `C-a b`                | list buffers                    |
 
 
 ### Ranger Operations (partially)
