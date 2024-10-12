@@ -122,7 +122,6 @@ alt-9 = 'workspace 9'
 # You can add any letter for your workspace below but note conflicts like ijkl
 alt-b = 'workspace B'   # Browser
 alt-t = 'workspace T'   # Terminal
-alt-v = 'workspace V'   # Video
 alt-z = 'workspace Z'   # Zotero
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -138,7 +137,6 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-t = 'move-node-to-workspace T'
-alt-shift-v = 'move-node-to-workspace V'
 alt-shift-z = 'move-node-to-workspace Z'
 
 # Full Screen
