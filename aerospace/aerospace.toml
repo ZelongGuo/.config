@@ -21,7 +21,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 20
+accordion-padding = 30
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -90,7 +90,7 @@ outer.right =      5
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+alt-comma = 'layout accordion vertical horizontal '
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-j = 'focus left'
@@ -105,8 +105,8 @@ alt-shift-i = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+alt-shift-left = 'resize smart -50' # alt-shift-minus = 'resize smart -50'
+alt-shift-right = 'resize smart +50' # alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 # Finder, WeChat, Eudic
@@ -147,10 +147,10 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
+# -----------------------------------------------------------------------------------------------
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
-# -----------------------------------------------------------------------------------------------
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -162,9 +162,9 @@ backspace = ['close-all-windows-but-current', 'mode main']
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
+alt-shift-j = ['join-with left', 'mode main']
+alt-shift-k = ['join-with down', 'mode main']
+alt-shift-i = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 # -----------------------------------------------------------------------------------------------
