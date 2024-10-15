@@ -188,14 +188,14 @@ run = "move-node-to-workspace Z"
 #1 #run = ["move-node-to-workspace 1", "layout floating"]
 #1 run = "layout floating"
 #1 
-#1 [[on-window-detected]]
-#1 if.app-id = 'com.tencent.xinWeChat'
-#1 run = "layout floating"
-#1 
-#1 [[on-window-detected]]
-#1 if.app-id = 'com.apple.systempreferences'
-#1 run = "layout floating"
-#1 
+[[on-window-detected]]
+if.app-id = 'com.tencent.xinWeChat'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = "layout floating"
+
 #1 [[on-window-detected]]
 #1 if.app-id = 'com.eusoft.eudic'
 #1 run = "layout floating"
