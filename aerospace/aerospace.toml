@@ -135,9 +135,12 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-b = 'move-node-to-workspace B'
-alt-shift-t = 'move-node-to-workspace T'
-alt-shift-z = 'move-node-to-workspace Z'
+# alt-shift-b = 'move-node-to-workspace B'
+# alt-shift-t = 'move-node-to-workspace T'
+# alt-shift-z = 'move-node-to-workspace Z'
+alt-shift-b = ['move-node-to-workspace B', "workspace B" ]
+alt-shift-t = ['move-node-to-workspace T', "workspace T" ]
+alt-shift-z = ['move-node-to-workspace Z', "workspace Z" ]
 
 # Full Screen
 alt-shift-f = 'fullscreen'
