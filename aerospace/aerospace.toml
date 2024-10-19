@@ -193,16 +193,14 @@ run = "move-node-to-workspace Z"
 #1 
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
-# run = "layout floating"
+ run = "layout floating"
 # run = ['layout accordion']
-run = ["move-node-to-workspace 1"]
 
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
-# run = "layout floating"
+run = "layout floating"
 # run = ['layout accordion']
-run = ["move-node-to-workspace 1"]
 
 #1 [[on-window-detected]]
 #1 if.app-id = 'com.eusoft.eudic'
