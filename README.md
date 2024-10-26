@@ -16,11 +16,11 @@ For now, 4 key configurations for me are: **Neovim, Ranger, Tmux and Aerospace**
 | Item        | Descriptions                                                                                               |
 |-------------|------------------------------------------------------------------------------------------------------------|
 | Applescript | Some apple scripts I wrote for rezise windowns and some stuff...                                           |
-| htop        | Automatically saved here when installed it.                                                                |
 | iterm2      | More information [this link](https://zhuanlan.zhihu.com/p/550022490).                                      |
 | nvim        | My **Neovim** configurations.                                                                              |
 | ranger      | ranger and its configurations.                                                                             |
 | Aerospace   | Aerospace toml file.                                                                                       |
+| surfingkeys | A vim-like browser extension.                                                                              |
 | zsh         | My zsh. Check [this link](https://seismo-learn.org/seismology101/best-practices/zsh/) in case you need it. |
 | .shared     | Script for getting access to remote server of the institution.                                             |
 | .tmux.conf  | My tmux settings.                                                                                          |
