@@ -7,9 +7,9 @@
 For now, 4 key configurations for me are: **Neovim, Ranger, Tmux and Aerospace**.  
 **Iterm2** is an optional configuration for Mac.  
 
-:star: ***Recommandation:*** Swapping `CapsLock` and `Ctrl` to have a better coding experience for **vim** and prefix key of **tmux** (I'm eyeing HHKB...). For some linux systems, see [this link.](https://www.emacswiki.org/emacs/MovingTheCtrlKey)  :)  
+:star: ***Recommendation:*** Swapping `CapsLock` and `Ctrl` to have a better coding experience for **vim** and prefix key of **tmux** (I'm eyeing HHKB...). For some linux systems, see [this link.](https://www.emacswiki.org/emacs/MovingTheCtrlKey)  :)  
 
---- 
+---
 
 ### Items
 
@@ -20,7 +20,7 @@ For now, 4 key configurations for me are: **Neovim, Ranger, Tmux and Aerospace**
 | iterm2      | More information [this link](https://zhuanlan.zhihu.com/p/550022490).                                      |
 | nvim        | My **Neovim** configurations.                                                                              |
 | ranger      | ranger and its configurations.                                                                             |
-| Aerospace   | Aerospace toml file.                                                               |
+| Aerospace   | Aerospace toml file.                                                                                       |
 | zsh         | My zsh. Check [this link](https://seismo-learn.org/seismology101/best-practices/zsh/) in case you need it. |
 | .shared     | Script for getting access to remote server of the institution.                                             |
 | .tmux.conf  | My tmux settings.                                                                                          |
@@ -55,13 +55,13 @@ For now, 4 key configurations for me are: **Neovim, Ranger, Tmux and Aerospace**
 | `C-a q`                | kill pane                       |
 | `C-a space`            | change pane view                |
 | `C-a h`                | display panes                   |
-| `**Window Operations** |
+| **Window Operations** |
 | `C-a c`                | create a new window             |
 | `C-a number`           | select NO. window               |
 | `C-a C-j`              | select previous window          |
 | `C-a C-l`              | select next window              |
 | `C-a C-q`              | kill window                     |
-| `**vim-copy mode**     |
+| **vim-copy mode**     |
 | `C-a [`                | enter vim-copy mode             |
 | `C-a p`                | paste buffer                    |
 | `C-a b`                | list buffers                    |

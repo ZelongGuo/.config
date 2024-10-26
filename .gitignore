@@ -1,3 +1,7 @@
 # .gitignore iterms
 .DS_Store
 nvim/
+btop/
+htop/
+coc/
+
