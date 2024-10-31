@@ -57,7 +57,8 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 		#"earthquake 3 0" \
 		#"pwd 89 211" \
 		"load 167 15" \
-		"pwd 1 15" \
+        # neglect the pwd because the space is so narrow to accommodate when split the windows
+		#"pwd 1 15" \
 		"uptime 124 15" \
 		#"macos_notification_count 29 255" \
 		#"mailcount 9 255" \
