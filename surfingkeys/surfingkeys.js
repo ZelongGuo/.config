@@ -1,3 +1,8 @@
+//------------------------------------------------------------------------------------- 
+// see https://github.com/SophiCeleste/SKSettings/blob/main/config.js 
+//     https://github.com/Marin-Kitagawa/surfingkeys_config/blob/main/settings.js
+//------------------------------------------------------------------------------------- 
+
 // an example to create a new mapping `ctrl-y`
 mapkey('<Ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
