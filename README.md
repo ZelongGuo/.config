@@ -4,7 +4,7 @@
 
 
 #### This is ***my configuration files*** in my Mac, a little changes maybe needed if you want to migrate it to your Linux.  
-For now, 4 key configurations for me are: **Neovim, Ranger, Tmux and Aerospace**.  
+For now, 5 key configurations for me are: **Neovim, Ranger, Tmux, lazygit and Aerospace**.  
 **Iterm2** is an optional configuration for Mac.  
 
 :star: ***Recommendation:*** Swapping `CapsLock` and `Ctrl` to have a better coding experience for **vim** and prefix key of **tmux** (I'm eyeing HHKB...). For some linux systems, see [this link.](https://www.emacswiki.org/emacs/MovingTheCtrlKey)  :)  
@@ -20,6 +20,7 @@ For now, 4 key configurations for me are: **Neovim, Ranger, Tmux and Aerospace**
 | nvim        | My **Neovim** configurations.                                                                              |
 | ranger      | ranger and its configurations.                                                                             |
 | Aerospace   | Aerospace toml file.                                                                                       |
+| lazygit     | lazygit yaml file.                                                                                    |
 | surfingkeys | A vim-like browser extension.                                                                              |
 | zsh         | My zsh. Check [this link](https://seismo-learn.org/seismology101/best-practices/zsh/) in case you need it. |
 | .shared     | Script for getting access to remote server of the institution.                                             |
