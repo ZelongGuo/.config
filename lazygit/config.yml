@@ -283,12 +283,13 @@ git:
   disableForcePushing: false
 
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#predefined-commit-message-prefix
-  commitPrefix:
-    # pattern to match on. E.g. for 'feature/AB-123' to match on the AB-123 use "^\\w+\\/(\\w+-\\w+).*"
-    pattern: ""
+  # Comment the following to prevent the pre-defined message when commit, see https://github.com/jesseduffield/lazygit/discussions/3632
+  # commitPrefix:
+  #   # pattern to match on. E.g. for 'feature/AB-123' to match on the AB-123 use "^\\w+\\/(\\w+-\\w+).*"
+  #   pattern: ""
 
-    # Replace directive. E.g. for 'feature/AB-123' to start the commit message with 'AB-123 ' use "[$1] "
-    replace: ""
+  #   # Replace directive. E.g. for 'feature/AB-123' to start the commit message with 'AB-123 ' use "[$1] "
+  #   replace: ""
 
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#predefined-branch-name-prefix
   branchPrefix: ""
@@ -502,7 +503,7 @@ keybinding:
     commitChangesWithEditor: C
     findBaseCommitForFixup: <c-f>
     confirmDiscard: x
-    # TODO: Set constimized keys <c-i>, see https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Command_Keybindings.md
+    # TODO: Set constimized keys, see https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Command_Keybindings.md
     ignoreFile: H # "<c-i>"
     refreshFiles: r
     stashAllChanges: s
