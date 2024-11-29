@@ -20,7 +20,7 @@ For now, 5 key configurations for me are: **Neovim, Ranger, Tmux, lazygit and Ae
 | nvim        | My **Neovim** configurations.                                                                              |
 | ranger      | ranger and its configurations.                                                                             |
 | Aerospace   | Aerospace toml file.                                                                                       |
-| lazygit     | lazygit yaml file.                                                                                    |
+| lazygit     | lazygit yaml file.                                                                                         |
 | surfingkeys | A vim-like browser extension.                                                                              |
 | zsh         | My zsh. Check [this link](https://seismo-learn.org/seismology101/best-practices/zsh/) in case you need it. |
 | .shared     | Script for getting access to remote server of the institution.                                             |
