@@ -123,6 +123,7 @@ alt-9 = 'workspace 9'
 alt-b = 'workspace B'   # Browser
 alt-t = 'workspace T'   # Terminal
 alt-z = 'workspace Z'   # Zotero
+alt-s = 'workspace S'   # Stickies
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 # alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
@@ -141,6 +142,7 @@ alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = ['move-node-to-workspace B', "workspace B" ]
 alt-shift-t = ['move-node-to-workspace T', "workspace T" ]
 alt-shift-z = ['move-node-to-workspace Z', "workspace Z" ]
+alt-shift-s = ['move-node-to-workspace S', "workspace S" ]
 
 # Full Screen
 alt-shift-f = 'fullscreen'
@@ -172,7 +174,7 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # -----------------------------------------------------------------------------------------------
 # Aotu-classification
-# type aerospace list-app in terminal to show the app id
+# type aerospace list-apps in terminal to show the app id
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = "move-node-to-workspace T"
@@ -185,12 +187,17 @@ run = "move-node-to-workspace B"
 if.app-id = 'org.zotero.zotero'
 run = "move-node-to-workspace Z"
 
+[[on-window-detected]]
+if.app-id = 'com.apple.Stickies'
+run = "move-node-to-workspace S"
+
 #1 # Float or Accordion
 #1 [[on-window-detected]]
 #1 if.app-id = 'com.apple.finder'
 #1 #run = ["move-node-to-workspace 1", "layout floating"]
 #1 run = "layout floating"
-#1 
+#1
+
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
  run = "layout floating"
