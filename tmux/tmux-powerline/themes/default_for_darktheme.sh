@@ -13,7 +13,7 @@ else
 fi
 
 #TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR:-'235'}
-TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR:-'250'} # NOTE: here the bg color should be same with the middle part of the status bar
+TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_BACKGROUND_COLOR:-'252'} # NOTE: here the bg color should be same with the middle part of the status bar
 TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR=${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR:-'255'}
 
 TMUX_POWERLINE_DEFAULT_LEFTSIDE_SEPARATOR=${TMUX_POWERLINE_DEFAULT_LEFTSIDE_SEPARATOR:-$TMUX_POWERLINE_SEPARATOR_RIGHT_BOLD}
@@ -38,10 +38,10 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 		#1 #"vcs_others 245 0" \
 
 		# for light mode
-		"tmux_session_info 245 0" \
-		"hostname 247 0" \
-		"ifstat     249 0" \
-		"ifstat_sys 249 0" \
+		"tmux_session_info 248 0" \
+		"hostname 250 0" \
+		"ifstat     252 0" \
+		"ifstat_sys 252 0" \
 		#"lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
 		#"wan_ip 24 255" \
 		#"vcs_branch 29 88" \
