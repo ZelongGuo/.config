@@ -124,6 +124,7 @@ alt-b = 'workspace B'   # Browser
 alt-t = 'workspace T'   # Terminal
 alt-z = 'workspace Z'   # Zotero
 alt-s = 'workspace S'   # Stickies
+alt-m = 'workspace M'   # Mail
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 # alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
@@ -143,6 +144,7 @@ alt-shift-b = ['move-node-to-workspace B', "workspace B" ]
 alt-shift-t = ['move-node-to-workspace T', "workspace T" ]
 alt-shift-z = ['move-node-to-workspace Z', "workspace Z" ]
 alt-shift-s = ['move-node-to-workspace S', "workspace S" ]
+alt-shift-m = ['move-node-to-workspace M', "workspace M" ]
 
 # Full Screen
 alt-shift-f = 'fullscreen'
@@ -190,6 +192,10 @@ run = "move-node-to-workspace Z"
 [[on-window-detected]]
 if.app-id = 'com.apple.Stickies'
 run = "move-node-to-workspace S"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = "move-node-to-workspace M"
 
 #1 # Float or Accordion
 #1 [[on-window-detected]]
