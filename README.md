@@ -26,6 +26,12 @@ For now, 5 key configurations for me are: **Neovim, Ranger, Tmux, lazygit and Ae
 | .shared     | Script for getting access to remote server of the institution.                                             |
 | .tmux.conf  | My tmux settings.                                                                                          |
 ---
+
+### Aerospace
+Note, an alternative is [JankyBorders](https://github.com/FelixKratz/JankyBorders) which is used for
+highlight the window borders.
+
+
 ### Iterm2 Operations
 | keys          | operations         |
 |---------------|--------------------|
@@ -67,6 +73,12 @@ For now, 5 key configurations for me are: **Neovim, Ranger, Tmux, lazygit and Ae
 | `C-a p`                | paste buffer                    |
 | `C-a b`                | list buffers                    |
 
+
+Note, the plugin `highlight` which is used for highlight the text and codes in ranger preview
+windows, it could be installed with homebrew:  
+```sh 
+brew install highlight
+```
 
 ### Ranger Operations (partially)
 | keys       | operations                              |
