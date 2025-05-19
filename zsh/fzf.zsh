@@ -36,6 +36,7 @@ export FZF_DEFAULT_OPTS="
 --bind='ctrl-o:execute(code {})+abort' \
 --bind 'ctrl-/:change-preview-window(hidden|)' \
 --preview-window='border-sharp' \
+--tiebreak='length,index' \
 --info right"
 
 # Use fd to respect .gitignore, include hidden files and exclude `.git` folders
@@ -57,15 +58,10 @@ _fzf_comprun() {
   shift
 
   case "$command" in
-    # cd \<TAB>
-    # cd)      fzf --preview 'eza --tree --color=always {} | head -200'                        "$@" ;;
-    cd)      fd --type d --hidden                | fzf  "$@" ;;
-
-    # vim 
-    vim)     fd --type f --hidden --exclude .git | fzf --preview 'highlight -O ansi -l {}' "$@" ;;
-
-    # any_other_command \<TAB>
-    *)       fzf --preview 'highlight -O ansi -l {}' "$@" ;;
+    cd)           fzf --preview  'tree -C {} | head -200'   "$@" ;;
+    # ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    vim)          fd --type f --hidden | fzf --preview 'highlight -O ansi -l {} | head -200' "$@" ;;
+    *)            fzf --preview 'highlight -O ansi -l {} | head -200'  "$@" ;;
   esac
 }
 
