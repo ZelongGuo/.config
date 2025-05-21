@@ -12,16 +12,23 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 FZF_COLORS="bg:-1,\
 bg+:-1,\
 fg:-1,\
-fg+:#ad9c8b,\
+fg+:#f44a4a,\
 hl:#d8a851,\
 hl+:#ceb250,\
 header:#ad9c8b,\
-border:#6B503C,\
-info:#6b503c,\
-prompt:#6b503c,\
-pointer:#6b503c,\
+border:#b26a6a,\
+info:#e4510d,\
+prompt:#eb0d0d,\
+pointer:#f44a4a,\
 marker:#7f61b3,\
-spinner:#6b503c"
+spinner:#e4510d"
+
+# fg+:#ad9c8b,\
+# prompt:#6b503c,\
+# border:#6B503C,\
+# info:#6b503c,\
+# pointer:#6b503c,\
+# spinner:#6b503c"
 
 # https://vitormv.github.io/fzf-themes/
 export FZF_DEFAULT_OPTS="
@@ -32,7 +39,7 @@ export FZF_DEFAULT_OPTS="
 --prompt '∷ ' \
 --pointer ▶ \
 --marker '✔ ' \
---bind ctrl-k:down,ctrl-i:up
+--bind ctrl-k:down,ctrl-i:up \
 --bind='ctrl-o:execute(code {})+abort' \
 --bind 'ctrl-/:change-preview-window(hidden|)' \
 --preview-window='border-sharp' \
