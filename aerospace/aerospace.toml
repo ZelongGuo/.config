@@ -179,7 +179,8 @@ alt-shift-l = ['join-with right', 'mode main']
 # Aotu-classification
 # type aerospace list-apps in terminal to show the app id
 [[on-window-detected]]
-if.app-id = 'com.googlecode.iterm2'
+# if.app-id = 'com.googlecode.iterm2'
+if.app-id = 'net.kovidgoyal.kitty'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
