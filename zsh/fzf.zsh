@@ -9,6 +9,23 @@ export FZF_TMUX_HEIGHT='80%'
 
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
+# ---------------------------------------------------------------------------------------
+
+# https://vitormv.github.io/fzf-themes/
+FZF_COLORS="bg:-1,\
+bg+:-1,\
+fg:-1,\
+fg+:#f44a4a,\
+hl:#d8a851,\
+hl+:#ceb250,\
+header:#ad9c8b,\
+border:#b26a6a,\
+info:#e4510d,\
+prompt:#eb0d0d,\
+pointer:#f44a4a,\
+marker:#7f61b3,\
+spinner:#e4510d"
+
 export FZF_DEFAULT_OPTS="
 --height 60% \
 --color '$FZF_COLORS' \
@@ -37,23 +54,6 @@ export FZF_DEFAULT_OPTS="
 # --info right"
 
 
-
-# ---------------------------------------------------------------------------------------
-
-# https://vitormv.github.io/fzf-themes/
-FZF_COLORS="bg:-1,\
-bg+:-1,\
-fg:-1,\
-fg+:#f44a4a,\
-hl:#d8a851,\
-hl+:#ceb250,\
-header:#ad9c8b,\
-border:#b26a6a,\
-info:#e4510d,\
-prompt:#eb0d0d,\
-pointer:#f44a4a,\
-marker:#7f61b3,\
-spinner:#e4510d"
 
 
 
