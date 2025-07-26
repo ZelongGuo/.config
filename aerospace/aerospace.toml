@@ -206,10 +206,10 @@ run = "move-node-to-workspace M"
 #1 run = "layout floating"
 #1
 
-[[on-window-detected]]
-if.app-id = 'com.tencent.xinWeChat'
- run = "layout floating"
-# run = ['layout accordion']
+#2 [[on-window-detected]]
+#2 if.app-id = 'com.tencent.xinWeChat'
+#2  run = "layout floating"
+#2 # run = ['layout accordion']
 
 
 [[on-window-detected]]
