@@ -1,12 +1,32 @@
 //------------------------------------------------------------------------------------- 
 // see https://github.com/SophiCeleste/SKSettings/blob/main/config.js 
 //     https://github.com/Marin-Kitagawa/surfingkeys_config/blob/main/settings.js
+//     https://gist.github.com/catbaron0/dd2f9b0ef1b9e5033836c945508356f0       (from Shaoshupai)
+//
+// ------------ VIM-like operation ------------
+// backward, forward 
+// open new tab, new tab with google, baidu etc. 
+// open some bookmared webs, like gemini, chatgpt, grok, deepseek and so on ...
+// tab movement
+// copy current link, copy some text ... 
+// 
+
+// ------------ TODOs ------------
+// Note: Surfingkeys is doing its best to make full use of keyboard for web browsing, but there are some limitations from Google Chrome itself, please see Brook Build of Chromium for a more thorough experience. Maybe in the futhre we can turn to Chromium ..
+
 //------------------------------------------------------------------------------------- 
 
 // an example to create a new mapping `ctrl-y`
 mapkey('<Ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
+
+map('h', 'i');
+map('i', 'k');
+// unmap('k');
+map('k', 'j');
+
+
 
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 map('gt', 'T');
@@ -39,54 +59,53 @@ map('gT', 'E');
 map('K', 'R');
 map('J', 'E');
 
-settings.tabsThreshold = 3;
+settings.tabsThreshold = 3;         // Show tab num when greater 3 tabs 
 settings.omnibarPosition = "top";
 settings.hintAlign = "left";
 mapkey('<Space>', 'Choose a tab with omnibar', function() {
     Front.openOmnibar({type: "Tabs"});
 });
+
+
+//------------ Theme config ---------------- 
 settings.theme = `
+.sk_theme {
+    background: #282a36; // main background color
+    color: #f8f8f2;      // text background color
+}
+
 .sk_theme input {
     font-family: "Fira Code";
+    color: #ffb86c;
 }
-// .sk_theme .url {
-//     font-size: 8px;
-// }
+
 #sk_omnibarSearchResult li div.url {
     font-weight: normal;
 }
-.sk_theme .omnibar_timestamp {
-    // font-size: 9px;
-    font-weight: bold;
-}
+
 // #sk_omnibarSearchArea input {
 //     font-size: 10px;
 // }
-.sk_theme .omnibar_visitcount {
-    // font-size: 9px;
-    font-weight: bold;
-}
+
 body {
     font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     // font-size: 10px;
 }
+
 kbd {
     font: 11px "Fira Code", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+
 // #sk_omnibarSearchArea .prompt, #sk_omnibarSearchArea .resultPage {
 //     font-size: 10px;
 // }
-.sk_theme {
-    background: #282a36;
-    color: #f8f8f2;
-}
+
 .sk_theme tbody {
     color: #ff5555;
 }
-.sk_theme input {
-    color: #ffb86c;
-}
+
 .sk_theme .url {
+    // font-size: 8px;
     color: #6272a4;
 }
 #sk_omnibarSearchResult>ul>li {
@@ -118,12 +137,15 @@ kbd {
     color: #ff79c6;
 }
 .sk_theme .omnibar_timestamp {
+    // font-size: 9px;
+    font-weight: bold;
     color: #bd93f9;
 }
 .sk_theme .omnibar_visitcount {
+    // font-size: 9px;
+    font-weight: bold;
     color: #f1fa8c;
 }
-
 .sk_theme .prompt, .sk_theme .resultPage {
     color: #50fa7b;
 }
