@@ -10,7 +10,10 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 # after-startup-command = []
-after-startup-command = ['exec-and-forget borders active_color=0xff21dc47 inactive_color=0xffe1e3e4  width=5.0']
+# after-startup-command = ['exec-and-forget borders active_color=0xff21dc47 inactive_color=0xffe1e3e4  width=10.0']
+after-startup-command = ['exec-and-forget borders active_color=0xBF0BF4E4 inactive_color=0xBFe1e3e4  width=8.0']
+# after-startup-command = ['exec-and-forget borders active_color=0xBFF87E63 inactive_color=0xBFe1e3e4  width=8.0']
+# after-startup-command = ['exec-and-forget borders active_color=0xBF63F3F8 inactive_color=0xBFe1e3e4  width=8.0']
 
 # Start AeroSpace at login
 start-at-login = false
@@ -52,12 +55,12 @@ on-focus-changed = ['move-mouse window-lazy-center'] # cursor move between windo
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 9
-inner.vertical =   9
-outer.left =       8
-outer.bottom =     8
-outer.top =        8
-outer.right =      8
+inner.horizontal = 14
+inner.vertical =   14
+outer.left =       14
+outer.bottom =     15
+outer.top =        15
+outer.right =      14
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
