@@ -36,9 +36,17 @@ export EDITOR=nvim
 # --- CONDA ---
 export conda="/Users/zelong/opt/miniconda3/etc/profile.d/conda.sh"
 
-## --- HOMEBREW GCC ---
-# export CC=/opt/homebrew/opt/gcc
+# --- HOMEBREW Tsinghua Mirrors for Domestic ---
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+export HOMEBREW_CASK_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
+# # --- Homebrew Officials, uncomment blow if needed  ---
+# export HOMEBREW_BREW_GIT_REMOTE="https://github.com/Homebrew/brew.git"
+# export HOMEBREW_CORE_GIT_REMOTE="https://github.com/Homebrew/homebrew-core.git"
+# export HOMEBREW_CASK_GIT_REMOTE="https://github.com/Homebrew/homebrew-cask.git"
+# unset HOMEBREW_BOTTLE_DOMAIN
 
 
 
