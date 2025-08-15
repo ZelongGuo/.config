@@ -325,7 +325,7 @@ const MY_YOUTUBE = "https://www.youtube.com/";
 // AI webs
 const MY_DEEPSEEK = "https://chat.deepseek.com/";
 const MY_GEMINI = "https://gemini.google.com/";
-
+const MY_CHATGPT = "https://chatgpt.com/";
 
 api.mapkey('<Space>gh', 'Open My GitHub', function() { window.open(MY_GITHUB, "_blank"); });
 api.mapkey('<Space>mw', 'Open My Website', function() { window.open(MY_WEBSITE, "_blank"); });
@@ -335,6 +335,7 @@ api.mapkey('<Space>rg', 'Open Research Gate', function() { window.open(MY_RESEAR
 
 api.mapkey('<Space>ds', 'Open Deepseek', function() { window.open(MY_DEEPSEEK, "_blank"); });
 api.mapkey('<Space>ge', 'Open Gemini', function() { window.open(MY_GEMINI, "_blank"); });
+api.mapkey('<Space>cg', 'Open ChatGPT', function() { window.open(MY_CHATGPT, "_blank"); });
 
 
 
