@@ -48,6 +48,28 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 # export HOMEBREW_CASK_GIT_REMOTE="https://github.com/Homebrew/homebrew-cask.git"
 # unset HOMEBREW_BOTTLE_DOMAIN
 
+# -------------------------------------------------------------------
+# --- Git Proxy Auto Config (Mihomo Party / Clash) ---
+# Auto test if clash (mihomo party) is running, if so, configuring the proxy for git
+
+setup_git_proxy() {
+    # The local port is 14122
+    local local_port=14122
+    # The default clash port is 7890
+    local clash_port=7890
+
+    if lsof -i tcp:$local_port -sTCP:LISTEN >/dev/null 2>&1; then
+        git config --global http.proxy "http://127.0.0.1:$clash_port"
+        git config --global https.proxy "http://127.0.0.1:$clash_port"
+        # echo "[Git Proxy] enabled! (http://127.0.0.1:$clash_port)"
+    else
+        git config --global --unset http.proxy >/dev/null 2>&1
+        git config --global --unset https.proxy >/dev/null 2>&1
+        # echo "[Git Proxy] disabled!（clash is not running now）"
+    fi
+}
+
+setup_git_proxy
 
 
 
