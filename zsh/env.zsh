@@ -16,12 +16,14 @@ export GMTHOME=$HOME/this_gmt
 export PATH=${GMTHOME}/bin:${PATH}
 export PROJ_LIB=$GMTHOME/share/proj
 GMT_VERSION=$(gmt --version)
+# If using pygmt (it has it own GS_LIB), it may link to following GS_LIB which would cause error
 if [[ "$GMT_VERSION" == "6.2.0" ]]; then
 	export GS_LIB=$GMTHOME/share/ghostscript/9.53.3/Resource/Init
 else
 	export GS_LIB=$GMTHOME/share/ghostscript/Resource/Init
 fi
 export MAGICK_CONFIGURE_PATH=$GMTHOME/lib/GraphicsMagick/config
+
 
 
 # -------------------------------------------------------------------
