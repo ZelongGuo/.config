@@ -73,5 +73,10 @@ setup_git_proxy() {
 
 setup_git_proxy
 
+# -------------------------------------------------------------------
+# --- Cluade Code Proxy Config ---
+# Search "proxy" in Mac system setting and config as blow
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890
+export PATH="$HOME/.local/bin:$PATH"
 
 
