@@ -22,9 +22,15 @@ if [[ ! -e $tmux_conf ]]; then
     ln -s $HOME/.config/zsh/.tmux_conf $tmux_conf
 fi
 
-# --------------------------- .shared --------------------------- 
+# --------------------------- .shared ---------------------------
 local shared_file=$HOME/.shared
 if [[ ! -e $shared_file ]]; then
     ln -s $HOME/.config/zsh/.shared $shared_file
 fi
 
+# --------------------------- claude skills ---------------------------
+local claude_dir=$HOME/.claude
+local claude_skills_dir=$HOME/.claude/skills
+if [[ ! -e $claude_dir ]] || [[ ! -e $claude_skills_dir ]]; then
+    ln -s $HOME/.config/claude/skills $claude_skills_dir
+fi
