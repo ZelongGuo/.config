@@ -88,8 +88,9 @@ _fzf_compgen_path() {
 
 # Use fd to generate the list for directory completion
 # - This affects directory completion (e.g., `cd \ <tab>`)
+# - Searches from home directory for easy navigation anywhere
 _fzf_compgen_dir() {
-  fd --type d --hidden "${FD_EXCLUDES[@]}" . "$1"
+  fd --type d --hidden "${FD_EXCLUDES[@]}" . "$HOME"
 }
 
 # # Advanced customization of fzf options via _fzf_comprun function
