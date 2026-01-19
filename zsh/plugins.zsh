@@ -32,5 +32,6 @@ fi
 local claude_dir=$HOME/.claude
 local claude_skills_dir=$HOME/.claude/skills
 if [[ ! -e $claude_dir ]] || [[ ! -e $claude_skills_dir ]]; then
-    ln -s $HOME/.config/claude/skills $claude_skills_dir
+    ln -s $HOME/.config/opencode/skills $claude_skills_dir
 fi
+
