@@ -1,8 +1,22 @@
-# .gitignore iterms
-.DS_Store
-nvim/
-btop/
-htop/
-coc/
+# ignore everything
+*
 
+# Do not ignore the followings:
+!aerospace/
+!AppleScript/
+!brew/
+!kitty/
+!lazygit/
+!opencode/
+
+!ranger/rc.conf
+!ranger/rifle.conf
+!ranger/scope.conf
+
+!surfingkeys/
+!tmux/
+!yazi/
+!zsh/
+
+!README.md
 
