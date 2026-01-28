@@ -50,6 +50,12 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 # export HOMEBREW_CASK_GIT_REMOTE="https://github.com/Homebrew/homebrew-cask.git"
 # unset HOMEBREW_BOTTLE_DOMAIN
 
+# When you come across some failed installation about the "Bottle", you can try to
+# comment the following lines or change it to other mirrors...
+#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
 # -------------------------------------------------------------------
 # --- Git Proxy Auto Config (Mihomo Party / Clash) ---
 # Auto test if clash (mihomo party) is running, if so, configuring the proxy for git
