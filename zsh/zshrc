@@ -1,14 +1,15 @@
 # ===================================================================
 # ZSH Configuration - Main Entry Point
 # ===================================================================
-# This file loads configuration modules based on the current OS
+# This is the main zsh configuration file. All configuration is managed
+# through ~/.config/zsh/ and this file is symlinked to ~/.zshrc
 
 # -------------------------------------------------------------------
-# Load common/shared configuration modules
+# Zim Framework - Initialize first
 # -------------------------------------------------------------------
-for file in env aliases vim_keybindings fzf_completion tmux plugins; do
-    source ~/.config/zsh/${file}.zsh
-done
+if [[ -s ~/.zim/init.zsh ]]; then
+    source ~/.zim/init.zsh
+fi
 
 # -------------------------------------------------------------------
 # Load OS-specific configuration
@@ -20,4 +21,12 @@ elif [[ "$OSTYPE" == linux-gnu* ]]; then
     # Linux
     source ~/.config/zsh/os/linux.zsh
 fi
+
+# -------------------------------------------------------------------
+# Load common/shared configuration modules
+# -------------------------------------------------------------------
+for file in zim env aliases vim_keybindings tmux fzf_completion; do
+    source ~/.config/zsh/${file}.zsh
+done
+
 

@@ -9,28 +9,33 @@
 # it'll throw a error because the session name conflict.
 # -----------------------------------------------------------------
 tmux_preexec() {
-	# Setting variable tmux_event
-   local tmux_event=${TMUX%%,*}-event/client-attached-pane
-	# Check whether the file (named with tmux_event + pane) existing
-  if [[ -f $tmux_event-$TMUX_PANE ]]; then
-		# show current tmux environment variables and reload them
-		eval $(tmux showenv -s)
-		# delete current file of current tmux pane	
-		command rm $tmux_event-$TMUX_PANE 2>/dev/null
-  fi
+    # Setting variable tmux_event
+    local tmux_event=${TMUX%%,*}-event/client-attached-pane
+    # Check whether the file (named with tmux_event + pane) existing
+    if [[ -f $tmux_event-$TMUX_PANE ]]; then
+        # show current tmux environment variables and reload them
+        eval $(tmux showenv -s)
+        # delete current file of current tmux pane	
+        command rm $tmux_event-$TMUX_PANE 2>/dev/null
+    fi
 }
+# # Only run tmux auto-start if tmux is installed
+# if ! command -v tmux &>/dev/null; then
+#     return
+# fi
+
 # Check if tmux is running
 if [[ -n $TMUX ]]; then
-	local tmux_event=${TMUX%%,*}-event/client-attached-pane
-	command rm $tmux_event-$TMUX_PANE 2>/dev/null
+    local tmux_event=${TMUX%%,*}-event/client-attached-pane
+    command rm $tmux_event-$TMUX_PANE 2>/dev/null
 
-	# load add-zsh-hook to current zsh environment
-	autoload -U add-zsh-hook
-	# add tmux_preexec to preexec hook
-	add-zsh-hook preexec tmux_preexec
+    # load add-zsh-hook to current zsh environment
+    autoload -U add-zsh-hook
+    # add tmux_preexec to preexec hook
+    add-zsh-hook preexec tmux_preexec
 
 else  # if tmux is not running, create a new session
-	tmux new -s "zelong"
+    tmux new -s "zelong"
 fi
 
 

@@ -54,7 +54,9 @@ export FZF_DEFAULT_OPTS="
 # --info right"
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if command -v fzf &>/dev/null; then
+    source <(fzf --zsh)
+fi
 
 # ---------------------------------------------------------------------------------------
 # Centralized array of folder patterns to exclude from all fzf searches

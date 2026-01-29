@@ -15,5 +15,7 @@ export EDITOR=nvim
 
 # -------------------------------------------------------------------
 # --- General PATH ---
+# for claude code
 export PATH="$HOME/.local/bin:$PATH"
+# for opencode
 export PATH="$HOME/.opencode/bin:$PATH"
