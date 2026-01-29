@@ -6,21 +6,12 @@
 !AppleScript/
 !lazygit/
 !opencode/
-
+!scripts/
 !ranger/rc.conf
 !ranger/rifle.conf
 !ranger/scope.conf
-
-!scripts/
 !tmux/
 !yazi/
 !zsh/
-
 !README.md
-
-# macOS symlinks
-aerospace
-brew
-iterm2
-# Linux symlinks (add as needed)
 
