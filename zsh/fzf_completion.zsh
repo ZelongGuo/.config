@@ -34,7 +34,7 @@ export FZF_DEFAULT_OPTS="
 --marker '✔ ' \
 --bind ctrl-k:down,ctrl-i:up \
 --scheme='path' \
---tiebreak='length,pathname'
+--tiebreak=length
 "
 
 # export FZF_DEFAULT_OPTS="
