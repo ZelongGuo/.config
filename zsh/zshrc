@@ -1,12 +1,23 @@
-source ~/.config/zsh/plugins.zsh
+# ===================================================================
+# ZSH Configuration - Main Entry Point
+# ===================================================================
+# This file loads configuration modules based on the current OS
 
-source ~/.config/zsh/env.zsh
+# -------------------------------------------------------------------
+# Load common/shared configuration modules
+# -------------------------------------------------------------------
+for file in env aliases vim_keybindings fzf_completion tmux plugins; do
+    source ~/.config/zsh/${file}.zsh
+done
 
-source ~/.config/zsh/aliases.zsh
-
-source ~/.config/zsh/vim.zsh
-
-source ~/.config/zsh/tmux.zsh
-
-source ~/.config/zsh/fzf.zsh
+# -------------------------------------------------------------------
+# Load OS-specific configuration
+# -------------------------------------------------------------------
+if [[ "$OSTYPE" == darwin* ]]; then
+    # macOS
+    source ~/.config/zsh/os/macos.zsh
+elif [[ "$OSTYPE" == linux-gnu* ]]; then
+    # Linux
+    source ~/.config/zsh/os/linux.zsh
+fi
 

@@ -2,10 +2,8 @@
 *
 
 # Do not ignore the followings:
-!aerospace/
+!os/
 !AppleScript/
-!brew/
-!kitty/
 !lazygit/
 !opencode/
 
@@ -13,10 +11,16 @@
 !ranger/rifle.conf
 !ranger/scope.conf
 
-!surfingkeys/
+!scripts/
 !tmux/
 !yazi/
 !zsh/
 
 !README.md
+
+# macOS symlinks
+aerospace
+brew
+iterm2
+# Linux symlinks (add as needed)
 
