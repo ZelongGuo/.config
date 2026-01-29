@@ -63,6 +63,12 @@ The bootstrap script will:
 3. Create symlinks for home directory configs (.zshrc, .zimrc, etc.)
 4. Reload zsh configuration
 
+**Symlink behavior:**
+- New symlinks are created automatically
+- Existing incorrect symlinks are replaced
+- Existing regular files/directories are **preserved** (not overwritten)
+- Run `~/.config/scripts/symlink.sh` anytime to refresh symlinks
+
 ### Linux Installation (with existing .config)
 
 If your `~/.config` directory already contains system configurations (e.g., `dconf`, `gtk-3.0`, `ibus`, `nautilus`) that you want to preserve, use the **temporary directory method**:
@@ -426,6 +432,12 @@ source ~/.config/zsh/zshrc
 ```bash
 ~/.config/scripts/symlink.sh
 ```
+
+**`.claude/skills` symlink failed?**
+This requires Claude Code CLI to be installed. Skip this error if you don't use Claude Code:
+- The symlink attempts to link `opencode/skills` → `~/.claude/skills`
+- If `~/.claude` directory doesn't exist, the symlink will be skipped
+- To install Claude Code: https://claude.com/claude-code
 
 **Zim not working?**
 ```bash

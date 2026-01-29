@@ -26,7 +26,13 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 # -------------------------------------------------------------------
-# Create a symlink if target doesn't exist
+# Create a symlink, replacing existing symlinks if needed
+# -------------------------------------------------------------------
+# Behavior:
+#   - If target doesn't exist: create symlink
+#   - If target is a symlink pointing to source: OK (skip)
+#   - If target is a symlink pointing elsewhere: remove and recreate
+#   - If target is a regular file/directory: skip (preserve user data)
 # -------------------------------------------------------------------
 create_symlink() {
     local source="$1"
@@ -39,20 +45,25 @@ create_symlink() {
         return
     fi
 
-    # Skip if target already exists (file or symlink)
-    if [[ -e "$target" ]]; then
+    # Handle existing targets
+    if [[ -e "$target" || -L "$target" ]]; then
         if [[ -L "$target" ]]; then
-            # Symlink already exists, check if it points to the right place
+            # Existing symlink - check if it points to the right place
             local current_target=$(readlink "$target")
             if [[ "$current_target" == "$source" ]]; then
                 echo "  ${GREEN}OK${NC}: $name"
-            else
-                echo "  ${YELLOW}Skipping${NC}: $name (existing symlink points elsewhere)"
+                return
             fi
+            # Remove incorrect symlink and recreate
+            rm "$target"
+            ln -s "$source" "$target"
+            echo "  ${GREEN}Replaced${NC}: $name (old symlink: $current_target)"
+            return
         else
-            echo "  ${YELLOW}Skipping${NC}: $name (existing file/directory)"
+            # Regular file or directory - skip to preserve user data
+            echo "  ${YELLOW}Skipping${NC}: $name (existing file/directory, not overwriting)"
+            return
         fi
-        return
     fi
 
     # Create the symlink
