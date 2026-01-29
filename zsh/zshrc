@@ -2,7 +2,15 @@
 # ZSH Configuration - Main Entry Point
 # ===================================================================
 # This is the main zsh configuration file. All configuration is managed
-# through ~/.config/zsh/ and this file is symlinked to ~/.zshrc
+# through the dotfiles repository and this file is symlinked to ~/.zshrc
+
+# -------------------------------------------------------------------
+# Detect dotfiles directory dynamically
+# -------------------------------------------------------------------
+# Get the directory where this file (zshrc) is located
+# Works whether repo is at ~/.config, ~/.config-git, or anywhere else
+ZSH_DIR="${${(%):-%x}:A:h}"
+# If zshrc is a symlink, this gives us the real path to the dotfiles
 
 # -------------------------------------------------------------------
 # Zim Framework - Initialize first
@@ -16,17 +24,17 @@ fi
 # -------------------------------------------------------------------
 if [[ "$OSTYPE" == darwin* ]]; then
     # macOS
-    source ~/.config/zsh/os/macos.zsh
+    source "$ZSH_DIR/os/macos.zsh"
 elif [[ "$OSTYPE" == linux-gnu* ]]; then
     # Linux
-    source ~/.config/zsh/os/linux.zsh
+    source "$ZSH_DIR/os/linux.zsh"
 fi
 
 # -------------------------------------------------------------------
 # Load common/shared configuration modules
 # -------------------------------------------------------------------
 for file in zim env aliases vim_keybindings tmux fzf_completion; do
-    source ~/.config/zsh/${file}.zsh
+    source "$ZSH_DIR/${file}.zsh"
 done
 
 
