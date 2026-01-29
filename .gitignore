@@ -3,7 +3,6 @@
 
 # Do not ignore the followings:
 !os/
-!AppleScript/
 !lazygit/
 !opencode/
 !scripts/
@@ -14,4 +13,10 @@
 !yazi/
 !zsh/
 !README.md
+
+# for macos
+!AppleScript/
+!aerospace/
+!brew/
+
 
