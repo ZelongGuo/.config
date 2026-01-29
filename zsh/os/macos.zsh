@@ -42,6 +42,8 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 # When you come across some failed installation about the "Bottle", you can try to
 # comment the following lines or change it to other mirrors...
 #export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles
+
+# Include the all apps installed by homebrew pathes to env virables PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # -------------------------------------------------------------------
