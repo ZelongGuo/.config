@@ -9,7 +9,12 @@
 # -------------------------------------------------------------------
 # Get the directory where this file (zshrc) is located
 # Works whether repo is at ~/.config, ~/.config-git, or anywhere else
-ZSH_DIR="${${(%):-%x}:A:h}"
+# Use $ZSH_DOTFILES_DIR as fallback (set by bootstrap.sh in zsh -c mode)
+if [[ -n "$ZSH_DOTFILES_DIR" ]]; then
+    ZSH_DIR="$ZSH_DOTFILES_DIR/zsh"
+else
+    ZSH_DIR="${${(%):-%x}:A:h}"
+fi
 # If zshrc is a symlink, this gives us the real path to the dotfiles
 
 # -------------------------------------------------------------------

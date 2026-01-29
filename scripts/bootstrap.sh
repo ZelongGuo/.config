@@ -99,6 +99,8 @@ zsh "$DOTFILE_DIR/scripts/symlink.sh"
 # -------------------------------------------------------------------
 echo ""
 echo "Step 2: Reloading zsh configuration..."
+# Export DOTFILE_DIR so zshrc can use it as fallback
+export ZSH_DOTFILES_DIR="$DOTFILE_DIR"
 zsh -c "source '$DOTFILE_DIR/zsh/zshrc'"
 
 # -------------------------------------------------------------------
