@@ -38,7 +38,8 @@ fi
 # -------------------------------------------------------------------
 # Load common/shared configuration modules
 # -------------------------------------------------------------------
-for file in zim env aliases vim_keybindings tmux fzf_completion; do
+# Note: zim is initialized above (not in this loop)
+for file in env aliases vim_keybindings tmux fzf_completion; do
     source "$ZSH_DIR/${file}.zsh"
 done
 
