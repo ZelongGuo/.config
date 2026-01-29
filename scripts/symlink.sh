@@ -94,7 +94,7 @@ echo "Creating cross-platform symlinks..."
 create_symlink "$DOTFILE_DIR/zsh/zshrc" "$HOME/.zshrc" ".zshrc"
 create_symlink "$DOTFILE_DIR/zsh/zimrc" "$HOME/.zimrc" ".zimrc"
 create_symlink "$DOTFILE_DIR/zsh/.gmtversions" "$HOME/.gmtversions" ".gmtversions"
-create_symlink "$DOTFILE_DIR/zsh/.tmux_conf" "$HOME/.tmux.conf" ".tmux.conf"
+create_symlink "$DOTFILE_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf" ".tmux.conf"
 create_symlink "$DOTFILE_DIR/zsh/.shared" "$HOME/.shared" ".shared"
 create_symlink "$DOTFILE_DIR/opencode/skills" "$HOME/.claude/skills" "claude/skills"
 
