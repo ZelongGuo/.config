@@ -44,6 +44,9 @@ else
 fi
 export MAGICK_CONFIGURE_PATH=$GMTHOME/lib/GraphicsMagick/config
 
+# Change to USTC mirrors to avoid network issue when get access to gmt remote data like dem 
+export GMT_DATA_SERVER=https://mirrors.ustc.edu.cn/gmt/data
+
 # -------------------------------------------------------------------
 # --- CONDA ---
 export conda="/Users/zelong/opt/miniconda3/etc/profile.d/conda.sh"
