@@ -4,29 +4,6 @@
 # -------------------------------------------------------------------
 
 # -------------------------------------------------------------------
-# --- GMT ---
-# NOTE: once you change the gmt version using gmtswitch, you should refresh the terminal or source ~/.zshrc to reset the GS_LIB
-# for more information, see
-# https://docs.gmt-china.org/latest/module/gmtswitch/
-# https://docs.gmt-china.org/latest/install/macOS/#gmt
-export GMTHOME=$HOME/this_gmt
-# export GMTHOME=/Applications/GMT-6.4.0.app/Contents/Resources
-export PATH=${GMTHOME}/bin:${PATH}
-export PROJ_LIB=$GMTHOME/share/proj
-GMT_VERSION=$(gmt --version)
-# If using pygmt (it has it own GS_LIB), it may link to following GS_LIB which would cause error
-if [[ "$GMT_VERSION" == "6.2.0" ]]; then
-	export GS_LIB=$GMTHOME/share/ghostscript/9.53.3/Resource/Init
-else
-	export GS_LIB=$GMTHOME/share/ghostscript/Resource/Init
-fi
-export MAGICK_CONFIGURE_PATH=$GMTHOME/lib/GraphicsMagick/config
-
-# -------------------------------------------------------------------
-# --- CONDA ---
-export conda="/Users/zelong/opt/miniconda3/etc/profile.d/conda.sh"
-
-# -------------------------------------------------------------------
 # --- HOMEBREW Tsinghua Mirrors for Domestic ---
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
@@ -45,6 +22,31 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 
 # Include the all apps installed by homebrew pathes to env virables PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# -------------------------------------------------------------------
+# --- GMT ---
+# NOTE: once you change the gmt version using gmtswitch, you should refresh the terminal or source ~/.zshrc to reset the GS_LIB
+# for more information, see
+# https://docs.gmt-china.org/latest/module/gmtswitch/
+# https://docs.gmt-china.org/latest/install/macOS/#gmt
+# NOTE: Moved AFTER brew shellenv to ensure GMT paths take precedence
+export GMTHOME=$HOME/this_gmt
+# export GMTHOME=/Applications/GMT-6.4.0.app/Contents/Resources
+export PATH=${GMTHOME}/bin:${PATH}
+export PROJ_LIB=$GMTHOME/share/proj
+GMT_VERSION=$(gmt --version)
+
+# If using pygmt (it has it own GS_LIB), it may link to following GS_LIB which would cause error
+if [[ "$GMT_VERSION" == "6.2.0" ]]; then
+	export GS_LIB=$GMTHOME/share/ghostscript/9.53.3/Resource/Init
+else
+	export GS_LIB=$GMTHOME/share/ghostscript/Resource/Init
+fi
+export MAGICK_CONFIGURE_PATH=$GMTHOME/lib/GraphicsMagick/config
+
+# -------------------------------------------------------------------
+# --- CONDA ---
+export conda="/Users/zelong/opt/miniconda3/etc/profile.d/conda.sh"
 
 # -------------------------------------------------------------------
 # --- Git Proxy Auto Config (Mihomo Party / Clash) ---
