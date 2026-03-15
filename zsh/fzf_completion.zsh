@@ -74,7 +74,10 @@ FD_EXCLUDES=(
   --exclude 'python2.7'
   --exclude 'python3.6'
   --exclude 'Library'
-  --exclude 'opt'
+  --exclude '.claude'
+  --exclude '.npm'
+  --exclude '.DS_Store'
+  # --exclude 'opt'
 )
 
 # Update FZF_DEFAULT_COMMAND to use FD_EXCLUDES for consistency
