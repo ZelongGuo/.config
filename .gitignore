@@ -18,4 +18,15 @@
 !aerospace/
 !brew/
 
+# Explicitly ignore (maintained in separate repos)
+nvim/
+btop/
+kitty/
+surfingkeys/
+git/
+
+# System files
+.DS_Store
+*.swp
+*~
 
