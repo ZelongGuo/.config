@@ -15,26 +15,8 @@ This repository contains my personal dotfiles, designed for daily development wo
 
 - **Modular structure** - Easy to maintain and extend
 - **Cross-platform compatibility** - macOS and Linux support with OS-specific configs
-- **Branch-based workflow** - Separate branches for each platform to avoid conflicts
 - **Terminal-centric workflow** - Optimized for Vim/tmux/fzf usage
 - **Smart automation** - Auto-symlinking, proxy detection, and environment setup
-
-## Branch Strategy
-
-This repository uses a **multi-branch strategy** to keep configurations clean and conflict-free:
-
-| Branch | Purpose | For |
-|--------|---------|-----|
-| **main** | Shared config baseline | Cross-platform configs (tmux, yazi, zsh, etc.) |
-| **macos** | macOS working branch | macOS machines, includes macOS-specific configs |
-| **linux** | Linux working branch | Linux machines, includes Linux-specific configs |
-
-**Why branches?**
-- No merge conflicts when working on different platforms
-- Clean separation of platform-specific and shared configs
-- Easy to sync shared changes via `main` branch
-
-> 📖 **See [BRANCHES.md](BRANCHES.md)** for detailed workflow and usage instructions.
 
 ---
 
@@ -62,35 +44,17 @@ sudo pacman -S zsh git
 
 ### Installation
 
-#### macOS
-
 ```bash
-# Clone macos branch directly
-git clone -c clone.defaultRemoteName=origin \
-  --branch macos \
-  https://github.com/ZelongGuo/.config.git ~/.config
+# Clone repository
+cd ~
+git clone https://github.com/ZelongGuo/.config.git .config
 
-# Run bootstrap script
+# Run bootstrap script (checks prerequisites automatically)
 ~/.config/scripts/bootstrap.sh
 
-# Make zsh your default shell
+# Make zsh your default shell (if not already)
 chsh -s $(which zsh)
-```
-
-#### Linux
-
-```bash
-# Method 1: Use independent directory (recommended)
-git clone --branch linux \
-  https://github.com/ZelongGuo/.config.git ~/.dotfiles
-
-# Run Linux setup script
-~/.dotfiles/scripts/linux-setup.sh
-
-# Method 2: Temporary directory (if .config has other files)
-git clone --branch linux \
-  https://github.com/ZelongGuo/.config.git ~/.config/dotfiles-temp
-~/.config/dotfiles-temp/scripts/bootstrap.sh
+# Then log out and log back in
 ```
 
 The bootstrap script will:
@@ -506,35 +470,12 @@ brew bundle dump --force --file=~/.config/os/macos/brew/Brewfile.txt
 
 ### Keeping Config in Sync
 
-#### Daily Workflow (macOS)
 ```bash
 cd ~/.config
-git checkout macos      # Ensure on macos branch
-git merge main          # Get shared updates
-# ... make changes ...
-git add . && git commit -m "update: xxx"
-git push origin macos
+git add .
+git commit -m "Update configs"
+git push
 ```
-
-#### Daily Workflow (Linux)
-```bash
-cd ~/.dotfiles  # or ~/.config
-git checkout linux      # Ensure on linux branch
-git merge main          # Get shared updates
-# ... make changes ...
-git add . && git commit -m "update: xxx"
-git push origin linux
-```
-
-#### Sync Shared Config to main
-```bash
-# After modifying shared configs (tmux, zsh, etc.)
-git checkout main
-git merge macos  # or linux
-git push origin main
-```
-
-> 💡 Use `~/.config/scripts/sync.sh` (or `~/.dotfiles/scripts/sync.sh`) for automatic syncing.
 
 ---
 
