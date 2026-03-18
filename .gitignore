@@ -2,6 +2,7 @@
 *
 
 # Do not ignore the followings:
+!BRANCHES.md
 !os/
 !lazygit/
 !opencode/
@@ -13,6 +14,7 @@
 !yazi/
 !zsh/
 !README.md
+!.gitignore
 
 # for macos
 !aerospace/
